@@ -1,0 +1,52 @@
+<h1 class="pagetitle"><%=h @league.name %></h1>
+<h2><%=h @league.description %></h2>
+
+<%= link_to 'Edit this League', edit_league_path(@league) %> | <%= link_to 'List of All Leagues', leagues_path %>
+
+
+
+<h1 class="block">Standings</h1>
+<table>
+<tr>
+	<th>Player</th>
+	<th>Total Points</th>
+</tr>
+<% for entry in @league.standings do %>
+<tr>
+	<th><%=h entry[0] %></th>
+	<th><%=h entry[1] %></th>
+</tr>
+<% end %>
+</table>
+
+<h1 class="block">Tournaments</h1>
+<table>
+<tr>
+	<th>Date</th>
+	<th>Buyin</th>
+	<th>Description</th>
+	<td><%= link_to 'New Tournament', new_league_tournament_path(@league) %>
+</tr>
+
+<% for tourney in @league.tournaments.sort{|e1, e2| e1.start <=> e2.start} do %>
+<tr>
+	<td><%= tourney.start %></td>
+	<td><%= tourney.buyin %></td>
+	<td><%= tourney.description %></td>
+	<td><%= link_to 'Show', league_tournament_path(@league, tourney) %> |
+		<%= link_to 'Edit', edit_league_tournament_path(@league, tourney) %> | 
+		<%= link_to 'Delete', league_tournament_path(tourney), :confirm => "Are you sure?", :method => :delete %>
+	</td>
+	</p>
+</tr>
+<tr>
+<% end %>
+</table>
+
+<h1 class="block">League Financials</h1>
+<% financials = @league.financials %>
+<table>
+<tr><td>Total Buy-ins</td><td><%= financials[0] %></td></tr>
+<tr><td>Less total payouts</td><td><%= financials[1] %></td></tr>
+<tr><td>Total in Prize Pool</td><td><%= financials[0] - financials[1] %></td></tr>
+</table>

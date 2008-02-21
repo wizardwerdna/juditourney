@@ -1,0 +1,20 @@
+<h1 class="pagetitle">Listing Leagues</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+	<td><%= link_to 'New league', new_league_path %></td>
+  </tr>
+
+<% for league in @leagues %>
+  <tr>
+    <td><%=h league.name %></td>
+    <td><%=h league.description %></td>
+    <td><%= link_to 'Show', league %> |
+		<%= link_to 'Edit', edit_league_path(league) %> |
+		<%= link_to 'Destroy', league, :confirm => 'Are you sure?', :method => :delete %>
+	</td>
+  </tr>
+<% end %>
+</table>

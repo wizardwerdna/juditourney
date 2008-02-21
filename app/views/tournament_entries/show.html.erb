@@ -1,0 +1,33 @@
+<h1 class="pagetitle">
+	Tournament Entry for <%= link_to @tournament.league.name, league_path(@tournament.league) %> 
+	on <%= link_to @tournament.start, league_tournament_path(@tournament.league, @tournament) %>
+</h1>
+
+<h2>
+<b>Tournament:</b>
+  <%=h @entry.tournament.league.name %> @ <%=h @entry.tournament.start %>
+</h2>
+
+<h2>
+  <b>Player:</b>
+  <%=h @entry.player.first %> <%=h @entry.player.last %>
+</h2>
+
+<h2>
+  <b>Paid:</b>
+  <%=h @entry.paid %>
+</h2>
+
+<h2>
+  <b>Result:</b>
+  <%=h @entry.result %>
+</h2>
+
+<h2>
+  <b>Payout:</b>
+  <%=h @entry.payout %>
+</h2>
+
+
+<%= link_to 'Edit', edit_tournament_entry_path(@tournament, @entry) %> |
+<%= link_to 'List of All Entries', tournament_entries_path(@tournament) %>

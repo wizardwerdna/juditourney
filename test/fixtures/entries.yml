@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tournament_id: 1
+  player_id: 1
+  paid: 1
+  result: 1
+  payout: 1
+
+two:
+  tournament_id: 1
+  player_id: 1
+  paid: 1
+  result: 1
+  payout: 1

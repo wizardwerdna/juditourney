@@ -1,0 +1,3 @@
+#!/bin/sh
+ssh pokerwiz.gotdns.com 
+

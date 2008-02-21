@@ -1,0 +1,41 @@
+<h1 class="pagetitle"><%=h @tournament.league.name %></h1>
+
+<h2>Starting at: <%=h @tournament.start %></h2>
+
+<h2><%=h @tournament.description %></h2>
+
+<h2>Buyin:<%=h @tournament.buyin %></h2>
+
+<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+<%= link_to 'List of All Tournaments', tournaments_path %>
+
+<h1 class="block">Results</h1>
+<table>
+<tr>
+	<th>Position</th>
+	<th>Player</th>
+	<th>Points</th>
+	<th>Buyin</th>
+	<th>Payout</th>
+	<td><%= link_to 'New Entry', new_entry_path %></td>
+</tr>
+
+<% for entry in @tournament.entries.sort{|e1, e2| (e1.result || 0) <=> (e2.result || 0) } do %>
+<tr>
+	<td><%= entry.result %></td>
+	<td><%= entry.player.first + " " + entry.player.last %></td>
+	<td><%= entry.points %></td>
+	<td><%= entry.paid %></td>
+	<td><%= entry.payout %></td>
+	<td><%= link_to 'Edit', edit_entry_path(entry) %> | <%= link_to 'Delete', entry, :confirm => "Are you sure?", :method => :delete %></td>
+</tr>
+<% end %>
+</table>
+
+<h1 class="block">Financials</h1>
+
+<table>
+<tr><th>Revenues:</th><td><%= r = @tournament.entries.inject(0){|sum,e| sum + e.paid} %></td></tr>
+<tr><th>Less Payouts:</th><td><%= p = @tournament.entries.inject(0){|sum,e| sum + e.payout} %></td></tr>
+<tr><th>Net to Prize Fund:</th><td><%= r - p %></td></tr>
+</table>

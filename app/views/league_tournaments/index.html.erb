@@ -1,0 +1,26 @@
+<h1 class="pagetitle">Listing tournaments for League <%= link_to @league.name, league_path(@league) %></h1>
+
+<table>
+  <tr>
+    <th>League</th>
+    <th>Start</th>
+    <th>Description</th>
+    <th>Buyin</th>
+	<td><%= link_to 'New tournament', new_league_tournament_path(@league) %></td>
+  </tr>
+
+<% for tournament in @tournaments %>
+	<tr>
+		<td><%=h tournament.league.name %></td>
+		<td><%=h tournament.start %></td>
+		<td><%=h tournament.description %></td>
+		<td><%=h tournament.buyin %></td>
+		<td>
+			<%= link_to 'Show', league_tournament_path(@league, tournament) %> |
+			<%= link_to 'Edit', edit_league_tournament_path(@league, tournament) %> |
+			<%= link_to 'Destroy', league_tournament_path(@league, tournament), :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+<% end %>
+</table>
+

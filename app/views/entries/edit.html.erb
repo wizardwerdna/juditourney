@@ -1,0 +1,37 @@
+<h1 class="pagetitle">Editing entry</h1>
+
+<%= error_messages_for :entry %>
+
+<% form_for(@entry) do |f| %>
+  <p>
+    <b>Tournament</b><br />
+    <%= f.select :tournament_id, Tournament.find(:all).collect {|t| ["#{t.league.name}-#{t.start}", t.id]} %>
+  </p>
+
+  <p>
+    <b>Player</b><br />
+    <%= f.select :player_id, Player.find(:all).collect {|p| ["#{p.first} #{p.last}", p.id]} %>
+  </p>
+
+  <p>
+    <b>Paid</b><br />
+    <%= f.text_field :paid %>
+  </p>
+
+  <p>
+    <b>Result</b><br />
+    <%= f.text_field :result %>
+  </p>
+
+  <p>
+    <b>Payout</b><br />
+    <%= f.text_field :payout %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @entry %> |
+<%= link_to 'Back', entries_path %>

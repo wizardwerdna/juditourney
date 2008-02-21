@@ -1,0 +1,20 @@
+<h1 class="pagetitle">Listing players</h1>
+
+<table>
+  <tr>
+    <th>First</th>
+    <th>Last</th>
+	<td><%= link_to 'New player', new_player_path %></td>
+  </tr>
+
+<% for player in @players %>
+  <tr>
+    <td><%=h player.first %></td>
+    <td><%=h player.last %></td>
+    <td><%= link_to 'Show', player %> |
+    	<%= link_to 'Edit', edit_player_path(player) %> |
+    	<%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %>
+	</td>
+  </tr>
+<% end %>
+</table>

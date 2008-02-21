@@ -1,0 +1,28 @@
+<h1 class="pagetitle">
+	Listing entries for <%= link_to @tournament.league.name, league_path(@tournament.league) %> 
+	on <%= link_to @tournament.start, league_tournament_path(@tournament.league, @tournament) %>
+</h1>
+
+<h1 class="block">Entries</h1>
+<table>
+<tr>
+	<th>Position</th>
+	<th>Player</th>
+	<th>Points</th>
+	<th>Buyin</th>
+	<th>Payout</th>
+	<td><%= link_to 'New Entry', new_tournament_entry_path(@tournament) %></td>
+</tr>
+
+<% for entry in @tournament.entries.sort{|e1, e2| (e1.result || 0) <=> (e2.result || 0) } do %>
+<tr>
+	<td><%= entry.result %></td>
+	<td><%= entry.player.full_name %></td>
+	<td><%= entry.points %></td>
+	<td><%= entry.paid %></td>
+	<td><%= entry.payout %></td>
+	<td><%= link_to 'Edit', edit_tournament_entry_path(@tournament, entry) %> | <%= link_to 'Delete', tournament_entry_path(@tournament, entry), 
+				:confirm => "Are you sure?", :method => :delete %></td>
+</tr>
+<% end %>
+</table>

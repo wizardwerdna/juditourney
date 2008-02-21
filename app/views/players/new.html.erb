@@ -1,0 +1,21 @@
+<h1 class="pagetitle">New player</h1>
+
+<%= error_messages_for :player %>
+
+<% form_for(@player) do |f| %>
+  <p>
+    <b>First</b><br />
+    <%= f.text_field :first %>
+  </p>
+
+  <p>
+    <b>Last</b><br />
+    <%= f.text_field :last %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', players_path %>
