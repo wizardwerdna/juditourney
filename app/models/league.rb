@@ -28,7 +28,7 @@ class League < ActiveRecord::Base
   end
   
   def unregistered_players
-    Player.find_by_sql ["SELECT DISTINCT p.* FROM players p, entries e, tournaments t WHERE e.player_id = p.id AND e.tournament_id = t.id AND t.league_id <> ? ORDER BY p.last, p.first", id]
+    Player.find(:all, :order => "last, first") - registered_players
   end
   
   def player_select_list
