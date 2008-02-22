@@ -13,11 +13,12 @@
 </tr>
 <% for entry in @league.standings do %>
 <tr>
-	<th><%=h entry[0] %></th>
+	<th><%=h entry[0].full_name %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></th>
 	<th><%=h entry[1] %></th>
 </tr>
 <% end %>
-</table>
+</table></br>
+* eligible for prize sharing</h3></br>
 
 <h1 class="block">Tournaments</h1>
 <table>

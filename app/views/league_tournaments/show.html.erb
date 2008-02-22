@@ -23,7 +23,7 @@
 <% for entry in @tournament.entries.sort{|e1, e2| (e1.result || 0) <=> (e2.result || 0) } do %>
 <tr>
 	<td><%= entry.result %></td>
-	<td><%= entry.player.first + " " + entry.player.last %></td>
+	<td><%= entry.player.full_name %></td>
 	<td><%= entry.points %></td>
 	<td><%= entry.paid %></td>
 	<td><%= entry.payout %></td>

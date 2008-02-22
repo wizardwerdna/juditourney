@@ -4,14 +4,5 @@ class Player < ActiveRecord::Base
   
   def full_name
     first + " " + last    
-  end
-  
-  def sort_name(add="")
-    add + last + "                    " + first
-  end
-
-  def sorted_by_name_and_membership(league)
-    players = self.find(:all).sort()
-  end
-
+  end   
 end

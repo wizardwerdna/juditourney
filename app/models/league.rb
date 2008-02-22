@@ -12,7 +12,7 @@ class League < ActiveRecord::Base
   def standings
       s = {}
       self.entries.each do |e|
-        s[e.player.full_name] = (s[e.player.full_name] || 0) + e.points
+        s[e.player] = (s[e.player] || 0) + e.points
       end
       s.to_a.sort{|a,b| b[1] <=> a[1]}
   end
@@ -34,6 +34,11 @@ class League < ActiveRecord::Base
   def player_select_list
     registered_players.collect{|each| [each.full_name, each.id]} +
     unregistered_players.collect{|each| [each.full_name, each.id]}
+  end
+
+  def eligible_for_prize_sharing(player)
+    entries.select{|entry| player == entry.player}.size >=
+      0.8 * tournaments.size
   end
 
 end
