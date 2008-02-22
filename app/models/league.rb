@@ -19,7 +19,7 @@ class League < ActiveRecord::Base
   
   def financials
       self.entries.inject([0,0]) do |sum, e|
-        [sum[0]+e.paid, sum[1]+e.payout]
+        [sum[0]+(e.paid || 0), sum[1]+(e.payout || 0)]
       end
   end
   

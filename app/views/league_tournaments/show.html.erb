@@ -35,8 +35,9 @@
 
 <h1 class="block">Financials</h1>
 
+<% financials = @tournament.financials %>
 <table>
-<tr><th>Revenues:</th><td><%= r = @tournament.entries.inject(0){|sum,e| sum + e.paid} %></td></tr>
-<tr><th>Less Payouts:</th><td><%= p = @tournament.entries.inject(0){|sum,e| sum + e.payout} %></td></tr>
-<tr><th>Net to Prize Fund:</th><td><%= r - p %></td></tr>
+<tr><th>Revenues:</th><td><%= financials[0] %></td></tr>
+<tr><th>Less Payouts:</th><td><%= financials[1] %></td></tr>
+<tr><th>Net to Prize Fund:</th><td><%= financials[0] - financials[1] %></td></tr>
 </table>

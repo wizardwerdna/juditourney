@@ -6,4 +6,10 @@ class Tournament < ActiveRecord::Base
   validates_presence_of :buyin
   validates_presence_of :league
   validates_presence_of :start
+  
+  def financials
+      self.entries.inject([0,0]) do |sum, e|
+        [sum[0]+(e.paid || 0), sum[1]+(e.payout || 0)]
+      end
+  end
 end

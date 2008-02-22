@@ -5,7 +5,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.xml
   def index
-    @entries = Entry.find(:all)
+    @entries = @resource_finder.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.xml
   def show
-    @entry = Entry.find(params[:id])
+    @entry = @resource_finder.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,7 +27,7 @@ class EntriesController < ApplicationController
   # GET /entries/new
   # GET /entries/new.xml
   def new
-    @entry = Entry.new
+    @entry = @resource_finder.new
     initialize_new_resource
     
     respond_to do |format|
@@ -38,13 +38,13 @@ class EntriesController < ApplicationController
 
   # GET /entries/1/edit
   def edit
-    @entry = Entry.find(params[:id])
+    @entry = @resource_finder.find(params[:id])
   end
 
   # POST /entries
   # POST /entries.xml
   def create
-    @entry = Entry.new(params[:entry])
+    @entry = @resource_finder.new(params[:entry])
 
     respond_to do |format|
       if @entry.save
@@ -61,12 +61,12 @@ class EntriesController < ApplicationController
   # PUT /entries/1
   # PUT /entries/1.xml
   def update
-    @entry = Entry.find(params[:id])
+    @entry = @resource_finder.find(params[:id])
 
     respond_to do |format|
       if @entry.update_attributes(params[:entry])
         flash[:notice] = 'Entry was successfully updated.'
-        format.html { redirect_resource }
+        format.html { redirect_to_resource }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class EntriesController < ApplicationController
   # DELETE /entries/1
   # DELETE /entries/1.xml
   def destroy
-    @entry = Entry.find(params[:id])
+    @entry = @resource_finder.find(params[:id])
     @entry.destroy
 
     respond_to do |format|

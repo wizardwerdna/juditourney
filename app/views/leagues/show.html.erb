@@ -35,7 +35,7 @@
 	<td><%= tourney.description %></td>
 	<td><%= link_to 'Show', league_tournament_path(@league, tourney) %> |
 		<%= link_to 'Edit', edit_league_tournament_path(@league, tourney) %> | 
-		<%= link_to 'Delete', league_tournament_path(tourney), :confirm => "Are you sure?", :method => :delete %>
+		<%= link_to 'Delete', league_tournament_path(@league, tourney), :confirm => "Are you sure?", :method => :delete %>
 	</td>
 	</p>
 </tr>
