@@ -1,4 +1,21 @@
 <h1>Player <%=@player.full_name%></h1>
 
+<table>
+	<tr>
+		<th>League</th>
+		<th>Start</th>
+		<th>Result</th>
+		<th>Points</th>
+	</tr>
+<% for entry in @player.entries %>
+	<tr>
+		<th><%= entry.tournament.league.name %></th>
+		<th><%= entry.tournament.formatted_start %></th>
+		<th><%= entry.result %></th>
+		<th><%= entry.points %></th>
+	</tr>
+<% end %>
+</table>
+
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>
