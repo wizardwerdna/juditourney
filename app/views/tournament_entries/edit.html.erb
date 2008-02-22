@@ -1,6 +1,6 @@
 <h1 class="pagetitle">
 	Editing Entry for <%= link_to @tournament.league.name, league_path(@tournament.league) %> 
-	on <%= link_to @tournament.start, league_tournament_path(@tournament.league, @tournament) %>
+	on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %>
 </h1>
 
 <%= error_messages_for :entry %>

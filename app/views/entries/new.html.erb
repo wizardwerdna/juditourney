@@ -5,7 +5,7 @@
 <% form_for(@entry) do |f| %>
   <p>
     <b>Tournament</b><br />
-    <%= f.select :tournament_id, Tournament.find(:all).collect {|t| ["#{t.league.name}-#{t.start}", t.id]} %>
+    <%= f.select :tournament_id, Tournament.find(:all).collect {|t| ["#{t.league.name}-#{t.formatted_start}", t.id]} %>
   </p>
 
   <p>

@@ -12,4 +12,8 @@ class Tournament < ActiveRecord::Base
         [sum[0]+(e.paid || 0), sum[1]+(e.payout || 0)]
       end
   end
+  
+  def formatted_start(format = "%a %b %d %I:%M %p")
+    start.strftime(format)
+  end
 end

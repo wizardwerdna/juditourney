@@ -3,29 +3,26 @@
 <%= error_messages_for :tournament %>
 
 <% form_for(@tournament, :url => league_tournament_url(@league, @tournament)) do |f| %>
-  <p>
-    <b>League</b><br />
-    <%= f.select :league_id, League.find(:all).collect {|l| [l.name, l.id]} %>
-   </p>
+	<%= f.hidden_field :league_id %>
 
-  <p>
-    <b>Start</b><br />
-    <%= f.datetime_select :start %>
-  </p>
+	<p>
+	  <b>Start</b><br />
+	  <%= f.datetime_select :start %>
+	</p>
 
-  <p>
-    <b>Description</b><br />
-    <%= f.text_area :description %>
-  </p>
+	<p>
+	  <b>Description</b><br />
+	  <%= f.text_area :description %>
+	</p>
 
-  <p>
-    <b>Buyin</b><br />
-    <%= f.text_field :buyin %>
-  </p>
+	<p>
+	  <b>Buyin</b><br />
+	  <%= f.text_field :buyin %>
+	</p>
 
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+	<p>
+	  <%= f.submit "Update" %>
+	</p>
 <% end %>
 
 <%= link_to 'Show', league_tournament_path(@league, @tournament) %> |

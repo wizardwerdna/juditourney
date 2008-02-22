@@ -30,7 +30,7 @@
 
 <% for tourney in @league.tournaments.sort{|e1, e2| e1.start <=> e2.start} do %>
 <tr>
-	<td><%= tourney.start %></td>
+	<td><%= tourney.formatted_start %></td>
 	<td><%= tourney.buyin %></td>
 	<td><%= tourney.description %></td>
 	<td><%= link_to 'Show', league_tournament_path(@league, tourney) %> |

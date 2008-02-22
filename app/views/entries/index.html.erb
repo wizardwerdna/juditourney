@@ -12,7 +12,7 @@
 
 <% for entry in @entries %>
   <tr>
-    <td><%=h entry.tournament.league.name %> @ <%=h entry.tournament.start %></td>
+    <td><%=h entry.tournament.league.name %> @ <%=h entry.tournament.formatted_start %></td>
     <td><%=h entry.player.first %> <%=h entry.player.last %></td>
     <td><%=h entry.paid %></td>
     <td><%=h entry.result %></td>
