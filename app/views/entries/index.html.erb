@@ -7,20 +7,24 @@
     <th>Paid</th>
     <th>Result</th>
     <th>Payout</th>
-	<td><%= link_to 'New entry', new_entry_path %></td>
+	<% if logged_in? %>
+		<td><%= link_to 'New entry', new_entry_path %></td>
+	<% end %>
   </tr>
 
 <% for entry in @entries %>
   <tr>
-    <td><%=h entry.tournament.league.name %> @ <%=h entry.tournament.formatted_start %></td>
+    <td><%=h entry.tournament && entry.tournament.league.name %> @ <%=h entry.tournament && entry.tournament.formatted_start %></td>
     <td><%=h entry.player.first %> <%=h entry.player.last %></td>
     <td><%=h entry.paid %></td>
     <td><%=h entry.result %></td>
     <td><%=h entry.payout %></td>
+	<% if logged_in? %>
     <td><%= link_to 'Show', entry %> |
 		<%= link_to 'Edit', edit_entry_path(entry) %> |
 		<%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %>
 	</td>
+	<% end %>
   </tr>
 <% end %>
 </table>

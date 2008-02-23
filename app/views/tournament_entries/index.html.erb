@@ -11,7 +11,9 @@
 	<th>Points</th>
 	<th>Buyin</th>
 	<th>Payout</th>
-	<td><%= link_to 'New Entry', new_tournament_entry_path(@tournament) %></td>
+	<% if logged_in? %>
+		<td><%= link_to 'New Entry', new_tournament_entry_path(@tournament) %></td>
+	<% end %>
 </tr>
 
 <% for entry in @tournament.entries.sort{|e1, e2| (e1.result || 0) <=> (e2.result || 0) } do %>
@@ -21,8 +23,10 @@
 	<td><%= entry.points %></td>
 	<td><%= entry.paid %></td>
 	<td><%= entry.payout %></td>
-	<td><%= link_to 'Edit', edit_tournament_entry_path(@tournament, entry) %> | <%= link_to 'Delete', tournament_entry_path(@tournament, entry), 
-				:confirm => "Are you sure?", :method => :delete %></td>
+	<% if logged_in? %>
+		<td><%= link_to 'Edit', edit_tournament_entry_path(@tournament, entry) %> | <%= link_to 'Delete', tournament_entry_path(@tournament, entry), 
+					:confirm => "Are you sure?", :method => :delete %></td>
+	<% end %>
 </tr>
 <% end %>
 </table>

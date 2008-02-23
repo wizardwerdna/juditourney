@@ -58,29 +58,39 @@
           </ul>
           
 
-          <!-- Navigation item -->
-          <ul>
-            <li><a href="/leagues/show/1">Bad Beat Bratz<!--[if IE 7]><!--></a><!--<![endif]-->
-          </ul>   
-       
-          <!-- Navigation item -->
-          <ul>
-            <li><a href="/leagues/show/2">Bandit Bratz<!--[if IE 7]><!--></a><!--<![endif]-->
-          </ul>          
+		  <% for league in League.find(:all) %>
+            <!-- Navigation item -->
+			<ul>
+		  	<li><a href="<%= league_path league %>"><%= league.name %><!--[if IE 7]><!--></a><!--<![endif]-->
+			</ul>
+		  <% end %>
 
           <!-- Navigation item -->
           <ul>
-            <li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
-              <!--[if lte IE 6]><table><tr><td><![endif]-->
-                <ul>
-                  <li><a href="/players">Players</a></li>
-                  <li><a href="/leagues">Leagues</a></li>
-                  <li><a href="/tournaments">Tournaments</a></li>
-                  <li><a href="/entries">Entries</a></li>
-                </ul>
-              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-            </li>
-          </ul>          
+            <li><a href="/players">Players<!--[if IE 7]><!--></a><!--<![endif]-->
+          </ul>
+
+		  <% if logged_in? %>
+	          <!-- Navigation item -->
+	          <ul>
+	            <li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
+	              <!--[if lte IE 6]><table><tr><td><![endif]-->
+	                <ul>
+	                  <li><a href="/players">Players</a></li>
+	                  <li><a href="/leagues">Leagues</a></li>
+	                  <li><a href="/tournaments">Tournaments</a></li>
+	                  <li><a href="/entries">Entries</a></li>
+	                </ul>
+	              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+	            </li>
+	          </ul>          
+
+	          <!-- Navigation item -->
+	          <ul>
+	            <li><a href="/sessions/destroy">Logout: <%=current_user.login%><!--[if IE 7]><!--></a><!--<![endif]-->
+	            </li>
+	          </ul>
+          <% end %>
         </div>
 	  </div>
 

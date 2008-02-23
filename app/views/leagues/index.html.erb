@@ -4,17 +4,21 @@
   <tr>
     <th>Name</th>
     <th>Description</th>
-	<td><%= link_to 'New league', new_league_path %></td>
+	<% if logged_in? %>
+		<td><%= link_to 'New league', new_league_path %></td>
+	<% end %>
   </tr>
 
 <% for league in @leagues %>
   <tr>
-    <td><%=h league.name %></td>
+    <td><%= link_to league.name, league %></td>
     <td><%=h league.description %></td>
-    <td><%= link_to 'Show', league %> |
-		<%= link_to 'Edit', edit_league_path(league) %> |
-		<%= link_to 'Destroy', league, :confirm => 'Are you sure?', :method => :delete %>
-	</td>
+	<% if logged_in? %>
+	    <td><%= link_to 'Show', league %> |
+			<%= link_to 'Edit', edit_league_path(league) %> |
+			<%= link_to 'Destroy', league, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	<% end %>
   </tr>
 <% end %>
 </table>

@@ -2,24 +2,26 @@
 
 <table>
   <tr>
-    <th>League</th>
-    <th>Start</th>
+    <th>Tournament</th>
     <th>Description</th>
     <th>Buyin</th>
+	<% if logged_in? %>
 	<td><%= link_to 'New tournament', new_league_tournament_path(@league) %></td>
+	<% end %>
   </tr>
 
 <% for tournament in @tournaments %>
 	<tr>
-		<td><%=h tournament.league.name %></td>
-		<td><%=h tournament.formatted_start %></td>
+		<td><%=link_to tournament.formatted_start, league_tournament_path(@league, tournament) %></td>
 		<td><%=h tournament.description %></td>
 		<td><%=h tournament.buyin %></td>
+		<% if logged_in? %>
 		<td>
 			<%= link_to 'Show', league_tournament_path(@league, tournament) %> |
 			<%= link_to 'Edit', edit_league_tournament_path(@league, tournament) %> |
 			<%= link_to 'Destroy', league_tournament_path(@league, tournament), :confirm => 'Are you sure?', :method => :delete %>
 		</td>
+		<% end %>
 	</tr>
 <% end %>
 </table>

@@ -1,8 +1,9 @@
 <h1 class="pagetitle"><%=h @league.name %></h1>
 <h2><%=h @league.description %></h2>
-
-<%= link_to 'Edit this League', edit_league_path(@league) %> | <%= link_to 'List of All Leagues', leagues_path %>
-
+<% if logged_in? %>
+	<%= link_to 'Edit this League', edit_league_path(@league) %> | 
+<% end %>
+<%= link_to 'List of All Leagues', leagues_path %>
 
 
 <h1 class="block">Standings</h1>
@@ -26,18 +27,21 @@
 	<th>Date</th>
 	<th>Buyin</th>
 	<th>Description</th>
-	<td><%= link_to 'New Tournament', new_league_tournament_path(@league) %>
+	<% if logged_in? %>
+		<td><%= link_to 'New Tournament', new_league_tournament_path(@league) %>
+	<% end %>
 </tr>
 
 <% for tourney in @league.tournaments.sort{|e1, e2| e1.start <=> e2.start} do %>
 <tr>
-	<td><%= tourney.formatted_start %></td>
+	<td><%= link_to tourney.formatted_start, league_tournament_path(@league, tourney) %></td>
 	<td><%= tourney.buyin %></td>
 	<td><%= tourney.description %></td>
-	<td><%= link_to 'Show', league_tournament_path(@league, tourney) %> |
-		<%= link_to 'Edit', edit_league_tournament_path(@league, tourney) %> | 
+	<% if logged_in? %>
+	<td><%= link_to 'Edit', edit_league_tournament_path(@league, tourney) %> | 
 		<%= link_to 'Delete', league_tournament_path(@league, tourney), :confirm => "Are you sure?", :method => :delete %>
 	</td>
+	<% end %>
 	</p>
 </tr>
 <tr>

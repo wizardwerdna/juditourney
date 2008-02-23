@@ -2,19 +2,20 @@
 
 <table>
   <tr>
-    <th>First</th>
-    <th>Last</th>
-	<td><%= link_to 'New player', new_player_path %></td>
+    <th>Player</th>
+	<% if logged_in? %>
+		<td><%= link_to 'New player', new_player_path %></td>
+	<% end %>
   </tr>
 
 <% for player in @players %>
   <tr>
-    <td><%=h player.first %></td>
-    <td><%=h player.last %></td>
-    <td><%= link_to 'Show', player %> |
-    	<%= link_to 'Edit', edit_player_path(player) %> |
+    <td><%= link_to player.full_name, player %></td>
+	<% if logged_in? %>
+    <td><%= link_to 'Edit', edit_player_path(player) %> |
     	<%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %>
 	</td>
+	<% end %>
   </tr>
 <% end %>
 </table>

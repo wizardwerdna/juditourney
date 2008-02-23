@@ -28,6 +28,7 @@
   <%=h @entry.payout %>
 </h2>
 
-
-<%= link_to 'Edit', edit_tournament_entry_path(@tournament, @entry) %> |
+<% if logged_in? %>
+	<%= link_to 'Edit', edit_tournament_entry_path(@tournament, @entry) %> |
+<% end %>
 <%= link_to 'List of All Entries', tournament_entries_path(@tournament) %>

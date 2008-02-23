@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :users
+
+  map.resource :session
+
   map.resources :entries
 
   map.resources :tournaments do |tournament|
@@ -40,6 +44,9 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
 
   # See how all your routes lay out with "rake routes"
+
+  
+  map.root :controller => "sessions", :action => "new"
 
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'

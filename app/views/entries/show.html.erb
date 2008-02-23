@@ -25,6 +25,7 @@
   <%=h @entry.payout %>
 </h2>
 
-
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<% if logged_in? %>
+	<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<% end %>
 <%= link_to 'List of All Entries', entries_path %>

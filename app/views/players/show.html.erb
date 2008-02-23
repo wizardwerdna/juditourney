@@ -2,15 +2,13 @@
 
 <table>
 	<tr>
-		<th>League</th>
-		<th>Start</th>
+		<th>Tournament</th>
 		<th>Result</th>
 		<th>Points</th>
 	</tr>
 <% for entry in @player.entries %>
 	<tr>
-		<th><%= entry.tournament.league.name %></th>
-		<th><%= entry.tournament.formatted_start %></th>
+		<th><%= link_to entry.tournament.league.name + '@' + entry.tournament.formatted_start, entry.tournament %></th>
 		<th><%= entry.result %></th>
 		<th><%= entry.points %></th>
 	</tr>
