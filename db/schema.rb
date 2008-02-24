@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 7) do
 
   create_table "entries", :force => true do |t|
     t.integer  "tournament_id"
@@ -28,13 +28,8 @@ ActiveRecord::Schema.define(:version => 6) do
     t.datetime "updated_at"
   end
 
-  create_table "players", :force => true do |t|
-    t.string   "first"
-    t.string   "last"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_url"
-  end
+# Could not dump table "players" because of following StandardError
+#   Unknown type 'player' for column 'description'
 
   create_table "tournaments", :force => true do |t|
     t.string   "league_id"

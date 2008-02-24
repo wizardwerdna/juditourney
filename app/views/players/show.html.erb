@@ -1,5 +1,11 @@
 <h1 class="pageheader">Player <%=@player.full_name%></h1><br/>
-<h3 class="block"><IMG SRC="<%= @player.image_url%>"/> (Image Url = "<%= @player.image_url%>")</h3>
+<DIV>
+	<IMG float="left" SRC="<%= @player.image_url%>"/>
+	<p>
+		<%= @player.description %><br/>
+	</p>
+	<p>(Image Url = "<%= @player.image_url%>")</p>
+</DIV>
 <table>
 	<tr>
 		<th>Tournament</th>
