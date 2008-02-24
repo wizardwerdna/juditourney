@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-	<th style="width:60px;">Pic</th>
+	<th class="pic">Pic</th>
     <th>Player</th>
 	<% if logged_in? %>
 		<td><%= link_to 'New player', new_player_path %></td>
@@ -11,7 +11,7 @@
 
 <% for player in @players %>
   <tr>
-    <td style="width:60px;">
+    <td class="pic">
 		<% if player.image_url %>
 			<IMG style="width:36px; align:center;" SRC = "<%=player.image_url%>"/>
 		<% end %>

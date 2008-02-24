@@ -9,13 +9,15 @@
 <h1 class="block">Standings</h1>
 <table>
 <tr>
+	<th class="pic">Pic</th>
 	<th>Player</th>
 	<th>Total Points</th>
 </tr>
 <% for entry in @league.standings do %>
 <tr>
-	<th><%=h entry[0].full_name %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></th>
-	<th><%=h entry[1] %></th>
+	<td class="pic"><%= entry[0].image_url_link %></td>
+	<td><%=h entry[0].full_name %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></td>
+	<td><%=h entry[1] %></td>
 </tr>
 <% end %>
 </table></br>

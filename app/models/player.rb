@@ -13,4 +13,8 @@ class Player < ActiveRecord::Base
   def full_name
     first + " " + last    
   end   
+  
+  def image_url_link
+    "<IMG SRC=\"#{image_url}\">"
+  end
 end
