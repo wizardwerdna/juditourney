@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "entries", :force => true do |t|
     t.integer  "tournament_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 5) do
     t.string   "last"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_url"
   end
 
   create_table "tournaments", :force => true do |t|
