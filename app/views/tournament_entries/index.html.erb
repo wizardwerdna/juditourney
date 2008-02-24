@@ -7,7 +7,7 @@
 <table>
 <tr>
 	<th>Position</th>
-	<th>Pic</th>
+	<th class = "pic">Pic</th>
 	<th>Player</th>
 	<th>Points</th>
 	<th>Buyin</th>
@@ -20,8 +20,8 @@
 <% for entry in @tournament.entries.sort{|e1, e2| (e1.result || 0) <=> (e2.result || 0) } do %>
 <tr>
 	<td><%= entry.result %></td>
-	<td><%= entry.player.image_url_link %></td>
-	<td><%= entry.player.full_name %></td>
+	<td class="pic"><%= link_to entry.player.image_url_link, entry.player %></td>
+	<td><%= link_to entry.player.full_name, entry.player %></td>
 	<td><%= entry.points %></td>
 	<td><%= entry.paid %></td>
 	<td><%= entry.payout %></td>

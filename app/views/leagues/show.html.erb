@@ -15,8 +15,8 @@
 </tr>
 <% for entry in @league.standings do %>
 <tr>
-	<td class="pic"><%= entry[0].image_url_link %></td>
-	<td><%=h entry[0].full_name %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></td>
+	<td class="pic"><%= link_to entry[0].image_url_link, entry[0] %></td>
+	<td><%= link_to entry[0].full_name, entry[0] %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></td>
 	<td><%=h entry[1] %></td>
 </tr>
 <% end %>

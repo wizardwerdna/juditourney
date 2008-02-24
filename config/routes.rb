@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
 
-# deprecated =>  map.resources :entries
+  map.resources :entries
 
   map.resources :tournaments do |tournament|
     tournament.resources :entries, :controller => :tournament_entries

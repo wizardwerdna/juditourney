@@ -9,7 +9,7 @@
 <% if logged_in? %>
 	<%= link_to 'Edit', edit_league_tournament_path(@league, @tournament) %> |
 <% end %>
-<%= link_to 'List of All Tournaments for the League', league_tournaments_path(@league) %>
+<%= link_to "List of All Tournaments for the #{@league.name}", league_tournaments_path(@league) %>
 
 <h1 class="block">Results</h1>
 <table>
@@ -28,8 +28,8 @@
 <% for entry in @tournament.entries.sort{|e1, e2| (e1.result || 0) <=> (e2.result || 0) } do %>
 <tr>
 	<td><%= entry.result %></td>
-	<td class="pic"><%= entry.player.image_url_link %></td>
-	<td><%= entry.player.full_name %></td>
+	<td class="pic"><%= link_to entry.player.image_url_link, entry.player %></td>
+	<td><%= link_to entry.player.full_name, entry.player %></td>
 	<td><%= entry.points %></td>
 	<td><%= entry.paid %></td>
 	<td><%= entry.payout %></td>
