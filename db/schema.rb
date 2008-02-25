@@ -28,8 +28,14 @@ ActiveRecord::Schema.define(:version => 7) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "players" because of following StandardError
-#   Unknown type 'player' for column 'description'
+  create_table "players", :force => true do |t|
+    t.string   "first"
+    t.string   "last"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_url"
+    t.text     "description"
+  end
 
   create_table "tournaments", :force => true do |t|
     t.string   "league_id"

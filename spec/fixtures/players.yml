@@ -3,7 +3,11 @@
 one:
   first: MyString
   last: MyString
+  image_url: MyString
+  description: MyText
 
 two:
   first: MyString
   last: MyString
+  image_url: MyString
+  description: MyText

@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  league_id: MyString
-  start: 2008-02-13 14:40:16
+  league_id: 1
+  start: MyString
   description: MyText
   buyin: 1
 
 two:
-  league_id: MyString
-  start: 2008-02-13 14:40:16
+  league_id: 1
+  start: MyString
   description: MyText
   buyin: 1
