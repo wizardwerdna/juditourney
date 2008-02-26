@@ -135,4 +135,5 @@
 @media print {.nav2 {float:left; width:900px; border:none; background:rgb(240,240,240); color:rgb(75,75,75); font-size:1.0em; font-size:130%;}} /*Color navigation bar normal mode*/
 @media print {.main {clear:both; width:900px; padding-bottom:30px; background:transparent;}}
 @media print {.footer {clear:both; width:900px; height:3.7em; padding:1.1em 0 0; background:rgb(240,240,240); font-size:1.0em; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}}
+
 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));} /*IE proprietary flicker hack for background images. Not validating, but OK*/

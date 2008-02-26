@@ -10,7 +10,7 @@ describe EntriesController do
     it "should map { :controller => 'entries', :action => 'new' } to /entries/new" do
       route_for(:controller => "entries", :action => "new").should == "/entries/new"
     end
-  
+    
     it "should map { :controller => 'entries', :action => 'show', :id => 1 } to /entries/1" do
       route_for(:controller => "entries", :action => "show", :id => 1).should == "/entries/1"
     end
@@ -18,8 +18,8 @@ describe EntriesController do
     it "should map { :controller => 'entries', :action => 'edit', :id => 1 } to /entries/1/edit" do
       route_for(:controller => "entries", :action => "edit", :id => 1).should == "/entries/1/edit"
     end
-  
-    it "should map { :controller => 'entries', :action => 'update', :id => 1} to /entries/1" do
+    
+    it "should map { :controller => 'entries', :action => 'update', :id => 1 } to /entries/1" do
       route_for(:controller => "entries", :action => "update", :id => 1).should == "/entries/1"
     end
   
