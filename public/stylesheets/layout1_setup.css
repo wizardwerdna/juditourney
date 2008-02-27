@@ -86,9 +86,9 @@
 .nav2 ul li a:hover ul li a:hover {background-color:rgb(210,210,210); text-decoration:none;} /*Color subcells hovering mode*/
 
 .header-breadcrumbs ul {float:left; width:560px; list-style:none; padding:0 0 0 15px; font-family:verdana,arial,sans-serif;}
-.header-breadcrumbs ul li {display:inline; padding:0 0 0 10px; background:transparent url(/images/bg_bullet_arrow.gif) no-repeat 0 50%; font-weight:bold; color:rgb(125,125,125); font-size:100%;}
-.header-breadcrumbs ul a {color:rgb(70,122,167); text-decoration:none;}
-.header-breadcrumbs ul a:hover {color:rgb(42,90,138); text-decoration:underline;}
+.breadcrumbs li {display:inline; padding:0 0 0 10px; background:transparent url(/images/bg_bullet_arrow.gif) no-repeat 0 50%; font-weight:bold; color:rgb(125,125,125); font-size:100%;}
+.breadcrumbs a {color:rgb(70,122,167); text-decoration:none;}
+.breadcrumbs a:hover {color:rgb(42,90,138); text-decoration:underline;}
 
 .header-breadcrumbs .searchform {float:right; width:285px; padding:0 17px 0px 0px !important /*Non-IE6*/; padding:0 12px 0px 0px /*IE6*/;}
 .header-breadcrumbs .searchform form fieldset {float:right; border:none;}

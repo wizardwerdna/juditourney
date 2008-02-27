@@ -1,0 +1,11 @@
+#! /usr/bin/osascript
+set autotest to "cd /Users/werdna/rails/juditourney; autotest"
+tell application "Terminal"
+	activate
+	set front_tab to do script autotest
+	tell front window
+		set background color to {255, 255, 255, 0.4}
+		set custom title to "autotester"
+		set miniaturized to true
+	end tell
+end tell

@@ -11,10 +11,16 @@ class Player < ActiveRecord::Base
   end
   
   def full_name
-    first + " " + last    
-  end   
+    return [first, last].join(' ') unless first.blank?
+    last
+  end
+  
+  def full_name=(string)
+    split = string.split(' ')
+    self.last, self.first = split.pop, split.join(' ')
+  end
   
   def image_url_link
-    "<IMG SRC=\"#{image_url}\">"
+    "<IMG SRC=\"#{image_url}\" />"
   end
 end

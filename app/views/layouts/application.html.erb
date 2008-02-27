@@ -19,6 +19,7 @@
   <%= stylesheet_link_tag 'scaffold', :media => :all %>
   <%= stylesheet_link_tag 'layout1_setup', :media => :all %>
   <%= stylesheet_link_tag 'layout1_text', :media => :all %>
+  <%= javascript_include_tag :defaults %>
   <title><%= controller.controller_name.capitalize %>: <%= controller.action_name %></title>
 
 </head>
@@ -95,9 +96,30 @@
 	  </div>
 
       <!-- A.4 HEADER BREADCRUMBS -->
-
       <!-- Breadcrumbs -->
       <div class="header-breadcrumbs">
+			<div class="breadcrumbs">
+				<ul>
+					<% for crumb in @crumbs %>
+					<li><a href="#"><%= crumb %></a></li>
+					<% end %>
+				</ul>
+			</div>
+			<%= auto_complete_stylesheet %>
+			<div class="searchform">
+				<% form_for :player, :url => '/players/search' do |f| %>
+				<fieldset>
+					<%= f.text_field :full_name, :class => "field", :autocomplete => "off", :id => "player_full_name_field" %>
+					<div class='auto_complete' id='auto_complete_list'></div>
+	             	<input type="submit" value="GO!" name="button" id="button" class="button"/>
+				</fieldset>
+				<% end %>
+				<%= auto_complete_field('player_full_name_field',
+				                        :update => 'auto_complete_list', 
+				                        :url => "/players/auto_complete_for_player_full_name",
+				                        :tokens => ',') %>
+				<span id="new_player"></span>
+			</div>
       </div>
     </div>
    <!-- For alternative headers END PASTE here -->

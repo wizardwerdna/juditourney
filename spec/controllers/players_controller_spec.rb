@@ -6,6 +6,31 @@ describe PlayersController do
   before(:each) do
     juditourney_login
   end
+  
+  describe "handling POST /auto_complete_for_player_full_name" do
+    before(:each) do
+      @player=mock_model(Player)
+    end
+    
+    def do_post
+      Player.stub!(:find).and_return([@player])
+      post :auto_complete_for_player_full_name
+    end
+    
+    it "should be successful" do
+      response.should be_success
+    end
+      
+    it "should render the autocomplete partial" do
+       response.should render_template('_player_full_name')
+    end
+    
+    it "should find all the players" do
+      Player.should_receive(:find).with(:all, {:order => "last, first"}).and_return([@player])
+      post :auto_complete_for_player_full_name
+    end
+    
+  end
 
   describe "handling GET /players" do
 

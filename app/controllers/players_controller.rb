@@ -1,9 +1,9 @@
 class PlayersController < ApplicationController
+  
   # GET /players
   # GET /players.xml
   def index
     @players = Player.find(:all, :order => "last, first")
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @players }
@@ -81,5 +81,13 @@ class PlayersController < ApplicationController
       format.html { redirect_to(players_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  def auto_complete_for_player_full_name
+    @players = Player.find(:all, :order => "last, first").select do |p|
+      p.full_name.downcase.include? params[:player][:full_name].downcase
+    end
+    logger.info("#{@players.size} records stolen")
+    render :partial => 'player_full_name'
   end
 end
