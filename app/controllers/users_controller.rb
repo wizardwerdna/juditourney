@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   include AuthenticatedSystem
-  
+#
+# BACKDOOR.  UNCOMMENT BELOW TO CREATE A FIRST ADMIN USER
+#
+#  skip_before_filter :login_required
+#  
 
   # render new.rhtml
   def new

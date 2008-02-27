@@ -1,37 +1,43 @@
-<h1 class="pagetitle">
-	New Entry for <%= link_to @tournament.league.name, league_path(@tournament.league) %> 
-	on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %>
-</h1>
+<h1 class="pagetitle">Tournament Entries for <%= link_to @tournament.league.name, league_path(@tournament.league) %></h1>
+<h1 class="block">New Entry on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %></h1>
 
+<div class="column1-unit">
 <%= error_messages_for :entry %>
-
-<% form_for(@entry, :url => tournament_entry_url(@tournament, @entry)) do |f| %>
-
-	<%= f.hidden_field :tournament_id %>
-
-	<p>
-	  <b>Player</b> or <%= link_to 'Add new Player', new_player_path %><br />
-	  <%= f.select :player_id, @tournament.league.player_select_list %>
-	</p>
-
-	<p>
-	  <b>Paid</b><br />
-	  <%= f.text_field :paid %>
-	</p>
-
-	<p>
-	  <b>Result</b><br />
-	  <%= f.text_field :result %>
-	</p>
-
-	<p>
-	  <b>Payout</b><br />
-	  <%= f.text_field :payout %>
-	</p>
-
-	<p>
-	  <%= f.submit "Create" %>
-	</p>
+</div>
+<% unless @entry.errors.empty? %>
+	<hr class="clear-contentunit" />
 <% end %>
 
-<%= link_to 'Back', tournament_entries_path(@tournament) %>
+
+<div class="column1-unit">
+	<% form_for(@entry, :url => tournament_entry_url(@tournament, @entry)) do |f| %>
+
+		<%= f.hidden_field :tournament_id %>
+
+		<p>
+		  <b>Player</b> or <%= link_to 'Add new Player', new_player_path %><br />
+		  <%= f.select :player_id, @tournament.league.player_select_list %>
+		</p>
+
+		<p>
+		  <b>Paid</b><br />
+		  <%= f.text_field :paid %>
+		</p>
+
+		<p>
+		  <b>Result</b><br />
+		  <%= f.text_field :result %>
+		</p>
+
+		<p>
+		  <b>Payout</b><br />
+		  <%= f.text_field :payout %>
+		</p>
+
+		<p>
+		  <%= f.submit "Create" %>
+		</p>
+	<% end %>
+
+	<%= link_to 'List of All Entries for this Tournament', tournament_entries_path(@tournament) %>
+</div>

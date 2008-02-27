@@ -1,29 +1,32 @@
-<h1 class="pagetitle">Listing players</h1>
+<h1 class="pagetitle">Players</h1>
 
-<table>
-  <tr>
-	<th class="pic">Pic</th>
-    <th>Player</th>
-	<% if logged_in? %>
-		<td><%= link_to 'New player', new_player_path %></td>
-	<% end %>
-  </tr>
-
-<% for player in @players %>
-  <tr>
-    <td class="pic">
-		<% if player.image_url %>
-			<IMG style="width:36px; align:center;" SRC = "<%=player.image_url%>"/>
+<h1 class="block">List of All Players</h1>
+<div class="column1-unit">
+	<table>
+	  <tr>
+		<th class="pic">Pic</th>
+	    <th>Player</th>
+		<% if logged_in? %>
+			<td><%= link_to 'New player', new_player_path %></td>
 		<% end %>
-	</td>
-	<td>
-		<%= link_to player.full_name, player %>
-	</td>
-	<% if logged_in? %>
-    <td><%= link_to 'Edit', edit_player_path(player) %> |
-    	<%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %>
-	</td>
+	  </tr>
+
+	<% for player in @players %>
+	  <tr>
+	    <td class="pic">
+			<% if player.image_url %>
+				<IMG style="width:36px; align:center;" SRC = "<%=player.image_url%>"/>
+			<% end %>
+		</td>
+		<td>
+			<%= link_to player.full_name, player %>
+		</td>
+		<% if logged_in? %>
+	    <td><%= link_to 'Edit', edit_player_path(player) %> |
+	    	<%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+		<% end %>
+	  </tr>
 	<% end %>
-  </tr>
-<% end %>
-</table>
+	</table>
+</div>

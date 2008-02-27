@@ -1,33 +1,40 @@
 <h1 class="pagetitle">Editing player</h1>
 
-<%= error_messages_for :player %>
-
-<% form_for(@player) do |f| %>
-  <p>
-    <b>First</b><br />
-    <%= f.text_field :first %>
-  </p>
-
-  <p>
-    <b>Last</b><br />
-    <%= f.text_field :last %>
-  </p>
-
-
-  <p>
-    <b>Description</b><br />
-    <%= f.text_area :description %>
-  </p>
-
-  <p>
-    <b>Image Url</b><br />
-    <%= f.text_field :image_url %>
-  </p>
-
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+<div class="column1-unit">
+	<%= error_messages_for :player %>
+</div>
+<% unless @player.errors.empty? %>
+	<hr class="clear-contentunit" />
 <% end %>
 
-<%= link_to 'Show', @player %> |
-<%= link_to 'Back', players_path %>
+<div class="column1-unit">
+	<% form_for(@player) do |f| %>
+	  <p>
+	    <b>First</b><br />
+	    <%= f.text_field :first %>
+	  </p>
+
+	  <p>
+	    <b>Last</b><br />
+	    <%= f.text_field :last %>
+	  </p>
+
+
+	  <p>
+	    <b>Description</b><br />
+	    <%= f.text_area :description %>
+	  </p>
+
+	  <p>
+	    <b>Image Url</b><br />
+	    <%= f.text_field :image_url %>
+	  </p>
+
+	  <p>
+	    <%= f.submit "Update" %>
+	  </p>
+	<% end %>
+
+	<%= link_to 'Show', @player %> |
+	<%= link_to 'Back', players_path %>
+</div>

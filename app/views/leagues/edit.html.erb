@@ -1,22 +1,29 @@
 <h1 class="pagetitle">Editing league</h1>
 
-<%= error_messages_for :league %>
-
-<% form_for(@league) do |f| %>
-  <p>
-    <b>Name</b><br />
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <b>Description</b><br />
-    <%= f.text_area :description %>
-  </p>
-
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+<div class="column1-unit">
+	<%= error_messages_for :league %>
+</div>
+<% unless @league.errors.empty? %>
+	<hr class="clear-contentunit" />
 <% end %>
 
-<%= link_to 'Show', @league %> |
-<%= link_to 'Back', leagues_path %>
+<div class="column1-unit">
+	<% form_for(@league) do |f| %>
+	  <p>
+	    <b>Name</b><br />
+	    <%= f.text_field :name %>
+	  </p>
+
+	  <p>
+	    <b>Description</b><br />
+	    <%= f.text_area :description %>
+	  </p>
+
+	  <p>
+	    <%= f.submit "Update" %>
+	  </p>
+	<% end %>
+
+	<%= link_to 'Show', @league %> |
+	<%= link_to 'Back', leagues_path %>
+</div>

@@ -1,59 +1,70 @@
 <h1 class="pagetitle"><%=h @league.name %></h1>
+
+<div class="column1-unit">
 <h2><%=h @league.description %></h2>
 <% if logged_in? %>
 	<%= link_to 'Edit this League', edit_league_path(@league) %> | 
 <% end %>
 <%= link_to 'List of All Leagues', leagues_path %>
+</div>
+<hr class="clear-contentunit" />
 
-
-<h1 class="block">Standings</h1>
-<table>
-<tr>
-	<th class="pic">Pic</th>
-	<th>Player</th>
-	<th>Total Points</th>
-</tr>
-<% for entry in @league.standings do %>
-<tr>
-	<td class="pic"><%= link_to entry[0].image_url_link, entry[0] %></td>
-	<td><%= link_to entry[0].full_name, entry[0] %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></td>
-	<td><%=h entry[1] %></td>
-</tr>
-<% end %>
-</table></br>
-* eligible for prize sharing</h3></br>
+<h1 class="block">League Standings</h1>
+<div class="column1-unit">
+	<table>
+		<tr>
+			<th class="pic">Pic</th>
+			<th>Player</th>
+			<th>Total Points</th>
+		</tr>
+		<% for entry in @league.standings do %>
+		<tr>
+			<td class="pic"><%= link_to entry[0].image_url_link, entry[0] %></td>
+			<td><%= link_to entry[0].full_name, entry[0] %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></td>
+			<td><%=h entry[1] %></td>
+		</tr>
+		<% end %>
+	</table></br>
+	<p class="caption">* eligible for prize sharing</p>
+</div>
+<hr class="clear-contentunit" />
 
 <h1 class="block">Tournaments</h1>
-<table>
-<tr>
-	<th>Date</th>
-	<th>Buyin</th>
-	<th>Description</th>
-	<% if logged_in? %>
-		<td><%= link_to 'New Tournament', new_league_tournament_path(@league) %>
-	<% end %>
-</tr>
+<div class="column1-unit">
+	<table>
+	<tr>
+		<th>Date</th>
+		<th>Buyin</th>
+		<th>Description</th>
+		<% if logged_in? %>
+			<td><%= link_to 'New Tournament', new_league_tournament_path(@league) %>
+		<% end %>
+	</tr>
 
-<% for tourney in @league.tournaments.sort{|e1, e2| e1.start <=> e2.start} do %>
-<tr>
-	<td><%= link_to tourney.formatted_start, league_tournament_path(@league, tourney) %></td>
-	<td><%= tourney.buyin %></td>
-	<td><%= tourney.description %></td>
-	<% if logged_in? %>
-	<td><%= link_to 'Edit', edit_league_tournament_path(@league, tourney) %> | 
-		<%= link_to 'Delete', league_tournament_path(@league, tourney), :confirm => "Are you sure?", :method => :delete %>
-	</td>
+	<% for tourney in @league.tournaments.sort{|e1, e2| e1.start <=> e2.start} do %>
+	<tr>
+		<td><%= link_to tourney.formatted_start, league_tournament_path(@league, tourney) %></td>
+		<td><%= tourney.buyin %></td>
+		<td><%= tourney.description %></td>
+		<% if logged_in? %>
+		<td><%= link_to 'Edit', edit_league_tournament_path(@league, tourney) %> | 
+			<%= link_to 'Delete', league_tournament_path(@league, tourney), :confirm => "Are you sure?", :method => :delete %>
+		</td>
+		<% end %>
+		</p>
+	</tr>
+	<tr>
 	<% end %>
-	</p>
-</tr>
-<tr>
-<% end %>
-</table>
+	</table>
+</div>
+<hr class="clear-contentunit" />
 
 <h1 class="block">League Financials</h1>
-<% financials = @league.financials %>
-<table>
-<tr><td>Total Buy-ins</td><td><%= financials[0] %></td></tr>
-<tr><td>Less total payouts</td><td><%= financials[1] %></td></tr>
-<tr><td>Total in Prize Pool</td><td><%= financials[0] - financials[1] %></td></tr>
-</table>
+<div class="column1-unit">
+	<% financials = @league.financials %>
+	<table>
+	<tr><td>Total Buy-ins</td><td><%= financials[0] %></td></tr>
+	<tr><td>Less total payouts</td><td><%= financials[1] %></td></tr>
+	<tr><td>Total in Prize Pool</td><td><%= financials[0] - financials[1] %></td></tr>
+	</table>
+</div>

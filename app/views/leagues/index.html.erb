@@ -1,24 +1,25 @@
 <h1 class="pagetitle">Listing Leagues</h1>
+<div class="column1-unit">
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Description</th>
+		<% if logged_in? %>
+			<td><%= link_to 'New league', new_league_path %></td>
+		<% end %>
+	  </tr>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-	<% if logged_in? %>
-		<td><%= link_to 'New league', new_league_path %></td>
+	<% for league in @leagues %>
+	  <tr>
+	    <td><%= link_to league.name, league %></td>
+	    <td><%=h league.description %></td>
+		<% if logged_in? %>
+		    <td><%= link_to 'Show', league %> |
+				<%= link_to 'Edit', edit_league_path(league) %> |
+				<%= link_to 'Destroy', league, :confirm => 'Are you sure?', :method => :delete %>
+			</td>
+		<% end %>
+	  </tr>
 	<% end %>
-  </tr>
-
-<% for league in @leagues %>
-  <tr>
-    <td><%= link_to league.name, league %></td>
-    <td><%=h league.description %></td>
-	<% if logged_in? %>
-	    <td><%= link_to 'Show', league %> |
-			<%= link_to 'Edit', edit_league_path(league) %> |
-			<%= link_to 'Destroy', league, :confirm => 'Are you sure?', :method => :delete %>
-		</td>
-	<% end %>
-  </tr>
-<% end %>
-</table>
+	</table>
+</div>

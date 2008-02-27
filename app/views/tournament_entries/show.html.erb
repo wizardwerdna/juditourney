@@ -1,12 +1,9 @@
 <h1 class="pagetitle">
-	Tournament Entry for <%= link_to @tournament.league.name, league_path(@tournament.league) %> 
-	on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %>
+	Tournament Entries for <%= link_to @tournament.league.name, league_path(@tournament.league) %> 
 </h1>
 
-<h2>
-<b>Tournament:</b>
-  <%=h @entry.tournament.league.name %> @ <%=h @entry.tournament.formatted_start %>
-</h2>
+<h1 class="block">Entry on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %></h1>
+<div class="column1-unit">
 
 <h2>
   <b>Player:</b>
@@ -31,4 +28,5 @@
 <% if logged_in? %>
 	<%= link_to 'Edit', edit_tournament_entry_path(@tournament, @entry) %> |
 <% end %>
-<%= link_to 'List of All Entries', tournament_entries_path(@tournament) %>
+<%= link_to 'List of All Entries for this Tournament', tournament_entries_path(@tournament) %>
+</div>

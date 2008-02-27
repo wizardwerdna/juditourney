@@ -1,26 +1,29 @@
-<h1 class="pagetitle">Listing tournaments</h1>
+<h1 class="pagetitle">Tournaments</h1>
+<h1 class="block">Index of All Tournaments</h1>
 
-<table>
-  <tr>
-    <th>Tournament</th>
-    <th>Description</th>
-    <th>Buyin</th>
-	<% if logged_in? %>
-		<td><%= link_to 'New tournament', new_tournament_path %></td>
-	<% end %>
-  </tr>
-
-<% for tournament in @tournaments %>
-	<tr>
-		<td><%= link_to tournament.league.name + "@" + tournament.formatted_start, tournament %></td>
-		<td><%=h tournament.description %></td>
-		<td><%=h tournament.buyin %></td>
+<div class="column1-unit">
+	<table>
+	  <tr>
+	    <th>Tournament</th>
+	    <th>Description</th>
+	    <th>Buyin</th>
 		<% if logged_in? %>
-			<td>
-				<%= link_to 'Edit', edit_tournament_path(tournament) %> |
-				<%= link_to 'Destroy', tournament, :confirm => 'Are you sure?', :method => :delete %>
-			</td>
+			<td><%= link_to 'New tournament', new_tournament_path %></td>
 		<% end %>
-	</tr>
-<% end %>
-</table>
+	  </tr>
+
+	<% for tournament in @tournaments %>
+		<tr>
+			<td><%= link_to tournament.league.name + "@" + tournament.formatted_start, tournament %></td>
+			<td><%=h tournament.description %></td>
+			<td><%=h tournament.buyin %></td>
+			<% if logged_in? %>
+				<td>
+					<%= link_to 'Edit', edit_tournament_path(tournament) %> |
+					<%= link_to 'Destroy', tournament, :confirm => 'Are you sure?', :method => :delete %>
+				</td>
+			<% end %>
+		</tr>
+	<% end %>
+	</table>
+</div>

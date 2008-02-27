@@ -1,27 +1,33 @@
-<h1 class="pageheader">Meet <%=@player.full_name%></h1><br/>
-<DIV>
-	<IMG float="left" SRC="<%= @player.image_url%>"/>
+<h1 class="pagetitle">Meet <%=@player.full_name%></h1>
+<h1 class="block">Biography</h1>
+<div class="column1-unit">
+	<img float="left" src="<%= @player.image_url%>"/>
 	<p>
 		<%= @player.description %><br/>
 	</p>
 	<p>(Image Url = "<%= @player.image_url%>")</p>
-</DIV>
-<table>
-	<tr>
-		<th>Tournament</th>
-		<th>Result</th>
-		<th>Points</th>
-	</tr>
-<% for entry in @player.entries %>
-	<tr>
-		<th><%= link_to entry.tournament.league.name + '@' + entry.tournament.formatted_start, entry.tournament %></th>
-		<th><%= entry.result %></th>
-		<th><%= entry.points %></th>
-	</tr>
-<% end %>
-</table>
+</div>
+<hr class="clear-contentunit" />
 
-<% if logged_in? %>
-	<%= link_to 'Edit', edit_player_path(@player) %> |
-<% end %>
-<%= link_to 'List of All Players', players_path %>
+<h1 class="block">Tournament Success</h1>
+<div class="column1-unit">
+	<table>
+		<tr>
+			<th>Tournament</th>
+			<th>Result</th>
+			<th>Points</th>
+		</tr>
+	<% for entry in @player.entries %>
+		<tr>
+			<th><%= link_to entry.tournament.league.name + '@' + entry.tournament.formatted_start, entry.tournament %></th>
+			<th><%= entry.result %></th>
+			<th><%= entry.points %></th>
+		</tr>
+	<% end %>
+	</table>
+
+	<% if logged_in? %>
+		<%= link_to 'Edit', edit_player_path(@player) %> |
+	<% end %>
+	<%= link_to 'List of All Players', players_path %>
+</div>
