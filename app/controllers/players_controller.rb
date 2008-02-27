@@ -90,4 +90,16 @@ class PlayersController < ApplicationController
     logger.info("#{@players.size} records stolen")
     render :partial => 'player_full_name'
   end
+  
+  def search
+    @player = Player.new
+    @player.full_name = params[:player][:full_name]
+    @result = Player.find(:first, :conditions => ["last = ? AND first = ?", @player.last, @player.first])
+    if @result.nil?
+      redirect_to players_url
+    else
+      redirect_to(@result) unless @result.nil?
+    end
+  end
+  
 end
