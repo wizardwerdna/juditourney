@@ -35,7 +35,7 @@
 /*******************/
 /*  HEADER SECTION */
 /*******************/
-.sitelogo {width:60px; height:40px; position:absolute; z-index:1; margin:22px 0 0 20px; background:url(/images/bg_head_top_logo.jpg); }
+.sitelogo {width: 226px; height:150px; position:absolute; z-index:1; margin:0px 0 0 674px; background:url(/images/aces_on_felt.jpg); }
 .sitename {width:300px; height:45px; position:absolute; z-index:1; margin:20px 0 0 90px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .sitename h1 {font-size:240%;}
 .sitename h2 {margin:-4px 0 0 0; color:rgb(125,125,125); font-size:120%;}

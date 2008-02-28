@@ -4,12 +4,16 @@ describe "/players/new.html.erb" do
   include PlayersHelper
   
   before(:each) do
+    @errors = mock_model(ActiveRecord::Errors)
+    @errors.stub!(:count).and_return(0)
+    @errors.stub!(:empty?).and_return(true)
     @player = mock_model(Player)
     @player.stub!(:new_record?).and_return(true)
     @player.stub!(:first).and_return("MyString")
     @player.stub!(:last).and_return("MyString")
     @player.stub!(:image_url).and_return("MyString")
     @player.stub!(:description).and_return("MyText")
+    @player.stub!(:errors).and_return(@errors)
     assigns[:player] = @player
   end
 

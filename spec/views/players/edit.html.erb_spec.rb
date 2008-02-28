@@ -9,10 +9,14 @@ describe "/players/edit.html.erb" do
     @player.stub!(:last).and_return("MyString")
     @player.stub!(:image_url).and_return("MyString")
     @player.stub!(:description).and_return("MyText")
+    @errors = mock_model(ActiveRecord::Errors)
+    @errors.stub!(:count).and_return(0)
+    @errors.stub!(:empty?).and_return(true)
+    @player.stub!(:errors).and_return(@errors)
     assigns[:player] = @player
   end
 
-  it "should render edit form" do
+  it "should render edit form" do 
     render "/players/edit.html.erb"
     
     response.should have_tag("form[action=#{player_path(@player)}][method=post]") do

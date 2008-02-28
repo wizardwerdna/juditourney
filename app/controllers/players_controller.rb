@@ -84,7 +84,9 @@ class PlayersController < ApplicationController
   end
   
   def auto_complete_for_player_full_name
+    logger.info("man, this sucks!")
     @players = Player.find(:all, :order => "last, first").select do |p|
+      p "params = #{params.to_yaml}"
       p.full_name.downcase.include? params[:player][:full_name].downcase
     end
     logger.info("#{@players.size} records stolen")
@@ -101,5 +103,5 @@ class PlayersController < ApplicationController
       redirect_to(@result) unless @result.nil?
     end
   end
-  
+
 end

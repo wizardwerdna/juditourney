@@ -8,26 +8,22 @@ describe PlayersController do
   end
   
   describe "handling POST /auto_complete_for_player_full_name" do
-    before(:each) do
-      @player=mock_model(Player)
-    end
-    
-    def do_post
-      Player.stub!(:find).and_return([@player])
-      post :auto_complete_for_player_full_name
-    end
-    
+
     it "should be successful" do
+      post :auto_complete_for_player_full_name, :player => {:full_name => "this is a test"}
       response.should be_success
     end
       
     it "should render the autocomplete partial" do
+       post :auto_complete_for_player_full_name, :player => {:full_name => "this is a test"}
        response.should render_template('_player_full_name')
     end
     
     it "should find all the players" do
+      @player=mock_model(Player)
+      @player.stub!(:full_name).and_return("Wizzy Beaver")
       Player.should_receive(:find).with(:all, {:order => "last, first"}).and_return([@player])
-      post :auto_complete_for_player_full_name
+      post :auto_complete_for_player_full_name, :player => {:full_name => "this is a test"}
     end
     
   end

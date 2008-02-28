@@ -8,6 +8,10 @@ describe "/leagues/new.html.erb" do
     @league.stub!(:new_record?).and_return(true)
     @league.stub!(:name).and_return("MyString")
     @league.stub!(:description).and_return("MyText")
+    @errors = mock_model(ActiveRecord::Errors)
+    @errors.stub!(:count).and_return(0)
+    @errors.stub!(:empty?).and_return(true)
+    @league.stub!(:errors).and_return(@errors)
     assigns[:league] = @league
   end
 
