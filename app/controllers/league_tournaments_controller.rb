@@ -1,5 +1,9 @@
 class LeagueTournamentsController < TournamentsController
   
+  def crumbs
+    [home_crumb, leagues_crumb, league_tournaments_crumb]
+  end
+  
   protected
   
   def redirect_to_resource

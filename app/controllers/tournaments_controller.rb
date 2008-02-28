@@ -1,5 +1,10 @@
 class TournamentsController < ApplicationController
   before_filter :load_resource_finder
+
+  def crumbs
+    [home_crumb, tournaments_crumb]
+  end
+
   
   # GET /tournaments
   # GET /tournaments.xml

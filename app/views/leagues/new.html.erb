@@ -1,5 +1,9 @@
-<h1 class="pagetitle">New league</h1>
+<h1 class="pagetitle">Leagues</h1>
+<h1 class="block">Create New League</h1>
 
+<% unless @league.errors.empty? %>
+	<hr class="clear-contentunit" />
+<% end %>
 <div class="column1-unit">
 	<%= error_messages_for :league %>
 </div>

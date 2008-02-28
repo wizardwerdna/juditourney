@@ -1,30 +1,33 @@
-<h1 class="pagetitle">Listing entries</h1>
+<h1 class="pagetitle">Entries</h1>
+<h1 class="block">List of All Entries</h1>
 
-<table>
-  <tr>
-    <th>Tournament</th>
-    <th>Player</th>
-    <th>Paid</th>
-    <th>Result</th>
-    <th>Payout</th>
-	<% if logged_in? %>
-		<td><%= link_to 'New entry', new_entry_path %></td>
-	<% end %>
-  </tr>
+<div class="column1-unit">
+	<table>
+	  <tr>
+	    <th>Tournament</th>
+	    <th>Player</th>
+	    <th>Paid</th>
+	    <th>Result</th>
+	    <th>Payout</th>
+		<% if logged_in? %>
+			<td><%= link_to 'New entry', new_entry_path %></td>
+		<% end %>
+	  </tr>
 
-<% for entry in @entries %>
-  <tr>
-    <td><%=h entry.tournament && entry.tournament.league.name %> @ <%=h entry.tournament && entry.tournament.formatted_start %></td>
-    <td><%=h entry.player.full_name %></td>
-    <td><%=h entry.paid %></td>
-    <td><%=h entry.result %></td>
-    <td><%=h entry.payout %></td>
-	<% if logged_in? %>
-    <td><%= link_to 'Show', entry %> |
-		<%= link_to 'Edit', edit_entry_path(entry) %> |
-		<%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %>
-	</td>
+	<% for entry in @entries %>
+	  <tr>
+	    <td><%=h entry.tournament && entry.tournament.league.name %> @ <%=h entry.tournament && entry.tournament.formatted_start %></td>
+	    <td><%=h entry.player.full_name %></td>
+	    <td><%=h entry.paid %></td>
+	    <td><%=h entry.result %></td>
+	    <td><%=h entry.payout %></td>
+		<% if logged_in? %>
+	    <td><%= link_to 'Show', entry %> |
+			<%= link_to 'Edit', edit_entry_path(entry) %> |
+			<%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+		<% end %>
+	  </tr>
 	<% end %>
-  </tr>
-<% end %>
-</table>
+	</table>
+</div>

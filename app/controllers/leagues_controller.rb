@@ -1,4 +1,9 @@
 class LeaguesController < ApplicationController
+ 
+  def crumbs
+    [home_crumb, leagues_crumb]
+  end
+ 
   # GET /leagues
   # GET /leagues.xml
   def index

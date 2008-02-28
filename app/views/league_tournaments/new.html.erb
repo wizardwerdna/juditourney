@@ -1,5 +1,9 @@
-<h1 class="pagetitle">New tournament for League <%= link_to @league.name, league_path(@league) %></h1>
+<h1 class="pagetitle"><%= link_to @league.name, league_path(@league) %> Tournaments</h1>
+<h1 class="block">Create New League Tournament</h1>
 
+<% unless @league.errors.empty? %>
+	<hr class="clear-contentunit" />
+<% end %>
 <div class="column1-unit">
 	<%= error_messages_for :tournament %>
 </div>

@@ -16,8 +16,48 @@ class ApplicationController < ActionController::Base
   
   protected
   
+  def crumbs
+    [home_crumb]
+  end
+  
   def set_crumbs
-    @crumbs = ["Name", "Rank", "Serial Number"]
+    @crumbs = crumbs
+  end
+  
+  def home_url
+    "http://www.badbeatbratz.com"
+  end
+  
+  def home_crumb
+    {:name => "Home", :url => home_url}
+  end
+  
+  def entries_crumb
+    {:name => "Entries", :url => entries_url}
+  end
+  
+  def layouts_crumb
+    {:name => "Layouts", :url => layouts_url}
+  end
+  
+  def league_tournaments_crumb
+    {:name => "Tournaments", :url => league_tournaments_url}
+  end
+  
+  def leagues_crumb
+    {:name => "Leagues", :url => leagues_url}
+  end
+  
+  def players_crumb
+    {:name => "Players", :url => players_url}
+  end
+  
+  def tournaments_crumb
+    {:name => "Tournaments", :url => tournaments_url}
+  end
+  
+  def tournament_entries_crumb
+    {:name => "Tournament Entries", :url => tournament_entries_url}
   end
   
   def authentication_information

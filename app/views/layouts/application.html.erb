@@ -99,11 +99,7 @@
       <!-- Breadcrumbs -->
       <div class="header-breadcrumbs">
 			<div class="breadcrumbs">
-				<ul>
-					<% for crumb in @crumbs %>
-					<li><a href="#"><%= crumb %></a></li>
-					<% end %>
-				</ul>
+				<%= breadcrumbs_for @crumbs %>
 			</div>
 			<%= auto_complete_stylesheet %>
 			<div class="searchform">
