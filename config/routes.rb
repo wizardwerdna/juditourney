@@ -6,9 +6,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :entries
 
   map.resources :tournaments do |tournament|
-    tournament.resources :entries, :controller => :tournament_entries
+    tournament.resources :entries, :controller => :tournament_entries, :member => {:ac_for_player_full_name => :all}
   end
-
+  
   map.resources :leagues do |league|
     league.resources :tournaments, :controller => :league_tournaments 
   end

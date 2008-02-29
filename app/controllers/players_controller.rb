@@ -18,7 +18,8 @@ class PlayersController < ApplicationController
   # GET /players/1.xml
   def show
     @player = Player.find(params[:id])
-
+    @page_title = "Meet #{@player.full_name}"
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @player }
@@ -87,23 +88,24 @@ class PlayersController < ApplicationController
     end
   end
   
-  def auto_complete_for_player_full_name
-    @players = Player.find(:all, :order => "last, first").select do |p|
-      p "params = #{params.to_yaml}"
-      p.full_name.downcase.include? params[:player][:full_name].downcase
-    end
-    render :partial => 'player_full_name'
-  end
-  
   def search
-    @player = Player.new
-    @player.full_name = params[:player][:full_name]
-    @result = Player.find(:first, :conditions => ["last = ? AND first = ?", @player.last, @player.first])
+    @result = Player.find_by_full_name(params[:player][:full_name])
     if @result.nil?
       redirect_to players_url
     else
       redirect_to(@result) unless @result.nil?
     end
   end
+  
+  def auto_complete_for_player_full_name
+    @players = Player.find_all_by_full_name_like(params[:player][:full_name], :order => "last, first")
+    render :partial => 'player_full_name'
+  end
 
+  def auto_complete_for_entry_player_full_name
+    puts params[:entry][:player_full_name]
+    @players = Player.find_all_by_full_name_like(params[:entry][:player_full_name], :order => "last, first")
+    puts "#{@players.size} players caught"
+    render :partial => 'player_full_name'
+  end
 end

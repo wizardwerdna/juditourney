@@ -72,7 +72,11 @@ describe TournamentsController do
 
     before(:each) do
       @tournament = mock_model(Tournament)
+      @league= mock_model(League)
       Tournament.stub!(:find).and_return(@tournament)
+      @tournament.stub!(:league).and_return(@league)
+      @tournament.stub!(:formatted_start).and_return(@league)
+      @league.stub!(:name).and_return(@name)
     end
   
     def do_get
@@ -103,8 +107,12 @@ describe TournamentsController do
   describe "handling GET /tournaments/1.xml" do
 
     before(:each) do
-      @tournament = mock_model(Tournament, :to_xml => "XML")
+      @tournament = mock_model(Tournament)
+      @league= mock_model(League)
       Tournament.stub!(:find).and_return(@tournament)
+      @tournament.stub!(:league).and_return(@league)
+      @tournament.stub!(:formatted_start).and_return(@league)
+      @league.stub!(:name).and_return(@name)
     end
   
     def do_get

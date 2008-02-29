@@ -9,6 +9,10 @@ describe PlayersController do
   
   describe "handling POST /auto_complete_for_player_full_name" do
 
+    before(:each) do
+      @player.stub!(:full_name).and_return("Wizzy Beaver")
+    end
+
     it "should be successful" do
       post :auto_complete_for_player_full_name, :player => {:full_name => "this is a test"}
       response.should be_success
@@ -20,8 +24,6 @@ describe PlayersController do
     end
     
     it "should find all the players" do
-      @player=mock_model(Player)
-      @player.stub!(:full_name).and_return("Wizzy Beaver")
       Player.should_receive(:find).with(:all, {:order => "last, first"}).and_return([@player])
       post :auto_complete_for_player_full_name, :player => {:full_name => "this is a test"}
     end
@@ -33,6 +35,7 @@ describe PlayersController do
     before(:each) do
       @player = mock_model(Player)
       Player.stub!(:find).and_return([@player])
+      @player.stub!(:full_name).and_return("Wizzy Beaver")
     end
   
     def do_get
@@ -65,6 +68,7 @@ describe PlayersController do
     before(:each) do
       @player = mock_model(Player, :to_xml => "XML")
       Player.stub!(:find).and_return(@player)
+      @player.stub!(:full_name).and_return("Wizzy Beaver")
     end
   
     def do_get
@@ -93,6 +97,7 @@ describe PlayersController do
 
     before(:each) do
       @player = mock_model(Player)
+      @player.stub!(:full_name).and_return("Wizzy beaver")
       Player.stub!(:find).and_return(@player)
     end
   
@@ -125,6 +130,7 @@ describe PlayersController do
 
     before(:each) do
       @player = mock_model(Player, :to_xml => "XML")
+      @player.stub!(:full_name).and_return("Wizzy Beaver")
       Player.stub!(:find).and_return(@player)
     end
   

@@ -1,8 +1,12 @@
 class TournamentsController < ApplicationController
-  before_filter :load_resource_finder
+  prepend_before_filter :load_resource_finder, :crumbs
 
   def crumbs
     [home_crumb, tournaments_crumb]
+  end
+  
+  def add_single_crumb
+    @crumbs << tournament_crumb(@tournament)
   end
 
   
@@ -21,7 +25,8 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1.xml
   def show
     @tournament = @resource_finder.find(params[:id])
-
+    add_single_crumb
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @tournament }

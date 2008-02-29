@@ -1,5 +1,4 @@
-<h1 class="pagetitle">Tournament Entries for <%= link_to @tournament.league.name, league_path(@tournament.league) %></h1>
-<h1 class="block">New Entry on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %></h1>
+<h1 class="block">New Entry for the <%= @tournament.formatted_start %> Tournament</h1>
 
 <div class="column1-unit">
 <%= error_messages_for :entry %>
@@ -8,16 +7,21 @@
 	<hr class="clear-contentunit" />
 <% end %>
 
-
 <div class="column1-unit">
-	<% form_for(@entry, :url => tournament_entry_url(@tournament, @entry)) do |f| %>
+	<% form_for([@tournament, @entry]) do |f| %>
 
 		<%= f.hidden_field :tournament_id %>
 
-		<p>
+		<!-- <p>
 		  <b>Player</b> or <%= link_to 'Add new Player', new_player_path %><br />
 		  <%= f.select :player_id, @tournament.league.player_select_list %>
-		</p>
+		</p> -->
+		
+		<p>
+		  <b>Player Name</b><br />
+		  <%= f.text_field :player_full_name, :autocomplete => "off", :id => "player_full_name_field_2" %>
+		  <div class='auto_complete' id='auto_complete_list_2'></div>
+		</p>	
 
 		<p>
 		  <b>Paid</b><br />
@@ -38,6 +42,10 @@
 		  <%= f.submit "Create" %>
 		</p>
 	<% end %>
+	<%= auto_complete_field('player_full_name_field_2',
+	                        :update => 'auto_complete_list_2', 
+	                        :url => '/players/auto_complete_for_entry_player_full_name',
+	                        :tokens => ',') %>
 
 	<%= link_to 'List of All Entries for this Tournament', tournament_entries_path(@tournament) %>
 </div>

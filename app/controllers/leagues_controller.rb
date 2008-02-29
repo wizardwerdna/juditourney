@@ -19,6 +19,7 @@ class LeaguesController < ApplicationController
   # GET /leagues/1.xml
   def show
     @league = League.find(params[:id])
+    @crumbs << league_crumb(@league)
 
     respond_to do |format|
       format.html # show.html.erb

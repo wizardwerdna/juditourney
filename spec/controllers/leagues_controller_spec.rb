@@ -72,6 +72,7 @@ describe LeaguesController do
 
     before(:each) do
       @league = mock_model(League)
+      @league.stub!(:name).and_return("league_name")
       League.stub!(:find).and_return(@league)
     end
   
@@ -104,6 +105,7 @@ describe LeaguesController do
 
     before(:each) do
       @league = mock_model(League, :to_xml => "XML")
+      @league.stub!(:name).and_return("league_name")
       League.stub!(:find).and_return(@league)
     end
   

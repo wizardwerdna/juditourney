@@ -8,7 +8,7 @@ describe "/leagues/show.html.erb" do
     @league.stub!(:name).and_return("MyString")
     @league.stub!(:description).and_return("MyText")
     
-    # assigns[:league] = @league
+    assigns[:league] = @league
   end
 
   it "should render attributes in <p>" do
