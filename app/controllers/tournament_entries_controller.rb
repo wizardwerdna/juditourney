@@ -28,6 +28,10 @@ class TournamentEntriesController < EntriesController
       redirect_to(tournament_entries_url(@tournament))
     end
 
+    def redirect_to_new_resource
+      redirect_to(new_tournament_entry_url(@tournament))
+    end
+
     def load_resource_finder
       @parent = @tournament = Tournament.find(params[:tournament_id])
       @resource_finder = @parent.entries

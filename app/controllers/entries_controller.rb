@@ -55,8 +55,8 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
-        flash[:notice] = 'Entry was successfully created.'
-        format.html { redirect_to_resource }
+        flash[:notice] = "Entry for #{@entry.player.full_name} was entered."
+        format.html { redirect_to_new_resource }
         format.xml  { render :xml => @entry, :status => :created, :location => @entry }
       else
         format.html { render :action => "new" }
@@ -102,6 +102,10 @@ class EntriesController < ApplicationController
 
   def redirect_to_resources
     redirect_to(entries_url)
+  end
+
+  def redirect_to_new_resource
+    redirect_to(new_entry_url)
   end
 
   def load_resource_finder
