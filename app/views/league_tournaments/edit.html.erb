@@ -8,7 +8,7 @@
 <% end %>
 
 <div class="column1-unit">
-	<% form_for(@tournament, :url => league_tournament_url(@league, @tournament)) do |f| %>
+	<% form_for([@league, @tournament] do |f| %>
 		<%= f.hidden_field :league_id %>
 
 		<p>
@@ -31,6 +31,6 @@
 		</p>
 	<% end %>
 
-	<%= link_to 'Show', league_tournament_path(@league, @tournament) %> |
+	<%= link_to 'Show', [@league, @tournament] %> |
 	<%= link_to 'Back', league_tournaments_path(@league) %>
 </div>
