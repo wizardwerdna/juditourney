@@ -15,6 +15,7 @@ class LeaguesController < ApplicationController
   # GET /leagues/1.xml
   def show
     @league = League.find(params[:id])
+    @report = @league.detail_report_data
 
     respond_to do |format|
       format.html # show.html.erb

@@ -10,51 +10,33 @@
 </div>
 <hr class="clear-contentunit" />
 
-<h1 class="block">League Standings</h1>
-<div class="column1-unit">
-	<table>
-		<tr>
-			<th class="pic">Pic</th>
-			<th>Player</th>
-			<th>Total Points</th>
-		</tr>
-		<% for entry in @league.standings do %>
-		<tr>
-			<td class="pic"><%= link_to entry[0].image_url_link, entry[0] %></td>
-			<td><%= link_to entry[0].full_name, entry[0] %><%= if @league.eligible_for_prize_sharing(entry[0]) then "*" end %></td>
-			<td><%=h entry[1] %></td>
-		</tr>
-		<% end %>
-	</table></br>
-	<p class="caption">* eligible for prize sharing</p>
-</div>
-<hr class="clear-contentunit" />
-
-<h1 class="block">Tournaments</h1>
+<h1 class="block"><%= @league.name %></h1>
 <div class="column1-unit">
 	<table>
 	<tr>
-		<th>Date</th>
-		<th>Buyin</th>
-		<th>Description</th>
-		<% if logged_in? %>
-			<td><%= link_to 'New Tournament', new_league_tournament_path(@league) %>
+		<th class="pic"></th>
+		<th></th>
+		<th class="short">Points</th>
+		<% for tournament in @report[:tournaments] %>
+		<th class="short"><A href="<%= league_tournament_path(@league, tournament) %>"><%= tournament.formatted_start(:short) %></A></th>
 		<% end %>
+		<th></th>
 	</tr>
 
-	<% for tourney in @league.tournaments.sort{|e1, e2| e1.start <=> e2.start} do %>
+	<% for player in @report[:players] %>
 	<tr>
-		<td><%= link_to tourney.formatted_start, league_tournament_path(@league, tourney) %></td>
-		<td><%= tourney.buyin %></td>
-		<td><%= tourney.description %></td>
-		<% if logged_in? %>
-		<td><%= link_to 'Edit', edit_league_tournament_path(@league, tourney) %> | 
-			<%= link_to 'Delete', league_tournament_path(@league, tourney), :confirm => "Are you sure?", :method => :delete %>
+		<td class="pic"><%= link_to player.image_url_link, player %></td>		
+		<td><a href="<%= player_path(player) %>"><%= player.full_name %></a></td>
+		<td class="short"><%= @report[:points][player] %></td>
+		<% for tournament in @report[:tournaments] %>
+		<td class="short">
+			<% if result = @report[:results][player][tournament] %>
+				<%= result.points %> / <%= result.place %>
+			<% end %>
 		</td>
 		<% end %>
-		</p>
+		<td></td>
 	</tr>
-	<tr>
 	<% end %>
 	</table>
 </div>

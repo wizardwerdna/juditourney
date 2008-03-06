@@ -7,7 +7,7 @@
 		<th></th>
 		<th class="short">Points</th>
 		<% for tournament in @report[:tournaments] %>
-		<th class="short"><%= tournament.formatted_start(:short) %></th>
+		<th class="short"><A href="<%= league_tournament_path(@league, tournament) %>"><%= tournament.formatted_start(:short) %></A></th>
 		<% end %>
 		<th></th>
 	</tr>
