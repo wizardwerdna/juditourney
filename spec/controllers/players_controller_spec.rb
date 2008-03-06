@@ -196,7 +196,7 @@ describe PlayersController do
   describe "handling GET /players/1/edit" do
 
     before(:each) do
-      @player = mock_model(Player)
+      @player = mock_model(Player, :full_name => "MyString")
       Player.stub!(:find).and_return(@player)
     end
   

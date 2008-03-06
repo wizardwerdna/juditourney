@@ -127,6 +127,13 @@
 .footer:after, p:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
 .clear-contentunit {clear:both; width:840px; height:0.1em; border:none; background:rgb(210,210,210); color:rgb(210,210,210);}
 
+/*******************/
+/*  FLASH BANNERS  */
+/*******************/
+.flash_error {background-color: pink; bottom-margin: 4px; padding: 4px 4px 4px 4px;}
+.flash_warning {background-color: yellow; bottom-margin: 4px; padding: 4px 4px 4px 4px;}
+.flash_notice {background-color: lightgreen; bottom-margin: 4px; padding: 4px 4px 4px 4px;}
+
 /********************************/
 /*  PRINTING and MISCELLANEOUS  */
 /********************************/

@@ -1,0 +1,84 @@
+Index: app/helpers/application_helper.rb
+===================================================================
+--- app/helpers/application_helper.rb	(revision 37)
++++ app/helpers/application_helper.rb	(working copy)
+@@ -1,6 +1,6 @@
+ # Methods added to this helper will be available to all templates in the application.
+ module ApplicationHelper
+-  def breadcrumbs_for(crumbs)
++  def old_breadcrumbs_for(crumbs)
+     result = "<ul>\r"
+     last_crumb = crumbs.pop
+     for crumb in crumbs
+@@ -10,4 +10,71 @@
+     result += "<ul>"
+     result
+   end
++  
++  def breadcrumbs_for(*crumbs)
++    content_for :breadcrumbs do
++      render(:partial => 'shared/breadcrumbs', :object => crumbs)
++    end
++  end
++  
++  def home_url
++    "http://www.badbeatbratz.com"
++  end
++  
++  def home_crumb
++    {:name => "Home", :url => home_link}
++  end
++  
++  def entries_crumb
++    {:name => "Entries", :url => entries_link}
++  end
++  
++  def layouts_crumb
++    {:name => "Layouts", :url => layouts_link}
++  end
++  
++  def league_tournaments_crumb(league)
++    {:name => "Tournaments", :url => league_tournaments_link(league)}
++  end
++  
++  def league_tournament_crumb(league, tournament)
++    {:name => tournament.formatted_start, :url => league_tournament_link(league, tournament)}
++  end
++  
++  def leagues_crumb
++    {:name => "Leagues", :url => leagues_link}
++  end
++  
++  def league_crumb (league)
++    {:name => league.name, :url => league_link(league) }
++  end
++  
++  def players_crumb
++    {:name => "Players", :url => players_link}
++  end
++  
++  def player_crumb(player)
++    {:name => "Players", :url => player_link(player)}
++  end
++    
++  def session_crumb
++    {:name => "Log In", :url => ""}
++  end
++  
++  def tournaments_crumb
++    {:name => "Tournaments", :url => tournaments_link}
++  end
++  
++  def tournament_crumb(tournament)
++    {:name => "#{tournament.league.name} @ #{tournament.formatted_start}"}
++  end
++  
++  def tournament_entries_crumb(entry)
++    {:name => "Tournament Entries", :url => tournament_entries_link(entry)}
++  end
++  
++  def tournament_entry_crumb(tournament, entry)
++    {:name => "Entry", :url => tournament_entries_link(@tournament)}
++  end
++    
+ end

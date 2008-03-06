@@ -1,0 +1,32 @@
+<% breadcrumbs_for home_crumb %>
+<h1 class="block"><%= @league.name %></h1>
+<div class="column1-unit">
+	<table>
+	<tr>
+		<th class="pic"></th>
+		<th></th>
+		<th class="short">Points</th>
+		<% for tournament in @report[:tournaments] %>
+		<th class="short"><%= tournament.formatted_start(:short) %></th>
+		<% end %>
+		<th></th>
+	</tr>
+
+	<% for player in @report[:players] %>
+	<tr>
+		<td class="pic"><%= link_to player.image_url_link, player %></td>		
+		<td><%= player.full_name %></td>
+		<td class="short"><%= @report[:points][player] %></td>
+		<% for tournament in @report[:tournaments] %>
+		<td class="short">
+			<% if result = @report[:results][player][tournament] %>
+				<%= result.points %> / <%= result.place %>
+			<% end %>
+		</td>
+		<% end %>
+		<td></td>
+	</tr>
+	<% end %>
+	</table>
+</div>
+<hr class="clear-contentunit" />

@@ -201,7 +201,8 @@ describe EntriesController do
   describe "handling POST /entries" do
 
     before(:each) do
-      @entry = mock_model(Entry, :to_param => "1")
+      @player = mock_model(Player, :full_name => "MyString")
+      @entry = mock_model(Entry, :to_param => "1", :player => @player)
       Entry.stub!(:new).and_return(@entry)
     end
     
@@ -219,7 +220,7 @@ describe EntriesController do
 
       it "should redirect to the new entry" do
         do_post
-        response.should redirect_to(entry_url("1"))
+        response.should redirect_to(new_entry_url)
       end
       
     end

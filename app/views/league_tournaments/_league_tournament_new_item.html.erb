@@ -1,0 +1,8 @@
+<td colspan="3">
+	<div id="new_tournament_form_errors">
+		<%= error_messages_for :tournament %>
+	</div>
+	<% remote_form_for [@league, league_tournament_new_item], :url => league_tournaments_path(@league, :method=>:post), :html => {:id=>"new_tournament_form"} do |f| %>
+		<%= render :partial => "league_tournament_form", :object => league_tournament_new_item, :locals => {:f => f, :league => @league, :button_text => "Create"} %>
+	<% end %>
+</td>

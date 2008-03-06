@@ -1,14 +1,5 @@
 class TournamentsController < ApplicationController
-  prepend_before_filter :load_resource_finder, :crumbs
-
-  def crumbs
-    [home_crumb, tournaments_crumb]
-  end
-  
-  def add_single_crumb
-    @crumbs << tournament_crumb(@tournament)
-  end
-
+  prepend_before_filter :load_resource_finder, :set_page_title
   
   # GET /tournaments
   # GET /tournaments.xml
@@ -25,7 +16,6 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1.xml
   def show
     @tournament = @resource_finder.find(params[:id])
-    add_single_crumb
     
     respond_to do |format|
       format.html # show.html.erb
@@ -53,15 +43,31 @@ class TournamentsController < ApplicationController
   # POST /tournaments.xml
   def create
     @tournament = @resource_finder.new(params[:tournament])
-
     respond_to do |format|
+      logger.warn @tournament.to_yaml
       if @tournament.save
         flash[:notice] = 'Tournament was successfully created.'
         format.html { redirect_to_resource }
         format.xml  { render :xml => @tournament, :status => :created, :location => @tournament }
+        format.js   { 
+          render :update do |page|
+            page.insert_html :after, 'new_tournament', :partial => 'league_tournament_item', :object => @tournament, :locals => {:league => @league}
+            page.select("#tournament_#{@tournament.id}").each do |item|
+                item.visual_effect :highlight, :endcolor=>"FFFFFF", :duration => 1.0
+            end
+            @tournament = @resource_finder.new
+            page.replace_html 'new_tournament', :partial => 'league_tournament_new_item', :object => @tournament, :locals => {:league => @league}            
+          end
+        }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @tournament.errors, :status => :unprocessable_entity }
+        format.js   {
+          render :update do |page|
+            page['new_tournament'].replace_html :partial => 'league_tournament_new_item', :object => @tournament, :locals => {:league => @league}
+            page['new_tournament_form_errors'].visual_effect :shake, 'new_tournament_form_errors', :duration => 0.5
+          end
+        }
       end
     end
   end

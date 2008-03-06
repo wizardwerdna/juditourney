@@ -40,5 +40,18 @@ class League < ActiveRecord::Base
     entries.select{|entry| player == entry.player}.size >=
       0.8 * tournaments.size
   end
-
+  
+  def detail_report_data
+    @entries = self.entries
+    @players = @entries.collect{|each| each.player}.uniq
+    @tournaments = @entries.collect{|each| each.tournament}.uniq
+    @results = {}
+    @players.each{|each| @results[each] = {}}
+    @entries.each{|each| @results[each.player][each.tournament] = each}
+    @points = {}
+    @players.each{|each| @points[each] = @results[each].inject(0) {|sum, association | sum + association[1].points }}
+    @players.sort!{|a, b| @points[b] <=> @points[a] }
+    
+    {:players => @players, :points => @points, :tournaments => @tournaments, :results => @results}
+  end
 end

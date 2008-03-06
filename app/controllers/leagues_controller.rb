@@ -1,9 +1,5 @@
 class LeaguesController < ApplicationController
  
-  def crumbs
-    [home_crumb, leagues_crumb]
-  end
- 
   # GET /leagues
   # GET /leagues.xml
   def index
@@ -19,7 +15,6 @@ class LeaguesController < ApplicationController
   # GET /leagues/1.xml
   def show
     @league = League.find(params[:id])
-    @crumbs << league_crumb(@league)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -53,9 +48,19 @@ class LeaguesController < ApplicationController
         flash[:notice] = 'League was successfully created.'
         format.html { redirect_to(@league) }
         format.xml  { render :xml => @league, :status => :created, :location => @league }
+        format.js   { 1/0
+          render :update do |page|
+            page.replace_html 'new_tournament', "we saved just fine!"
+          end
+        }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @league.errors, :status => :unprocessable_entity }
+        format.js   { 1/0
+          render :update do |page|
+            page.replace_html 'new_tournament', "we lost, just fucking lost!"
+          end
+        }
       end
     end
   end

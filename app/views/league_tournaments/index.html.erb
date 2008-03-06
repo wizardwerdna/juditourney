@@ -1,28 +1,18 @@
+<% breadcrumbs_for home_crumb, leagues_crumb, league_crumb(@league), league_tournaments_crumb(@league) -%>
 <h1 class="block">List of All League Tournaments</h1>
 <div class="column1-unit">
 	<table>
-	  <tr>
-	    <th>Tournament</th>
-	    <th>Description</th>
-	    <th>Buyin</th>
-		<% if logged_in? %>
-		<td><%= link_to 'New tournament', new_league_tournament_path(@league) %></td>
-		<% end %>
-	  </tr>
-
-	<% for tournament in @tournaments %>
 		<tr>
-			<td><%=link_to tournament.formatted_start, league_tournament_path(@league, tournament) %></td>
-			<td><%=h tournament.description %></td>
-			<td><%=h tournament.buyin %></td>
-			<% if logged_in? %>
-			<td>
-				<%= link_to 'Show', league_tournament_path(@league, tournament) %> |
-				<%= link_to 'Edit', edit_league_tournament_path(@league, tournament) %> |
-				<%= link_to 'Destroy', league_tournament_path(@league, tournament), :confirm => 'Are you sure?', :method => :delete %>
-			</td>
-			<% end %>
+			<th>Tournament</th>
+			<th>Description</th>
+			<th>Buyin</th>
+			<% if logged_in? -%>
+			<td><%= link_to 'New tournament', new_league_tournament_path(@league), :onclick => "Element.toggle('new_tournament'); return false;" %></td>
+			<% end -%>
 		</tr>
-	<% end %>
+		<% content_tag_for(:tr, tournament = Tournament.new, :style => "display: none;") do -%>
+			<%= render :partial => "league_tournament_new_item", :object => tournament, :locals => {:league => @league} %>
+		<% end %>
+		<%= render :partial => "league_tournament_item", :collection => @tournaments, :locals=> {:league => @league} %>
 	</table>
 </div>

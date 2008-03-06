@@ -16,6 +16,14 @@ class Entry < ActiveRecord::Base
     end
   end
   
+  def place
+    if result.blank?
+      "???"
+    else
+      result.ordinalize
+    end
+  end
+        
   def player_full_name
     player && player.full_name
   end

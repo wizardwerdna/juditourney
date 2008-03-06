@@ -1,0 +1,5 @@
+<% content_tag_for(:tr, league_tournament_edit_item) do -%>
+	<td colspan="3">
+		<%= render :partial => "league_tournament_form", :object => league_tournament_new_item, :locals=> {:league => league, :button_text=>"Create"} %>
+	</td>
+<% end -%>

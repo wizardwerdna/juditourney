@@ -1,38 +1,21 @@
+<% breadcrumbs_for home_crumb, leagues_crumb, league_crumb(@league), league_tournaments_crumb(@league) %>
 <h1 class="block">Create New League Tournament</h1>
 
 <% unless @league.errors.empty? %>
-	<hr class="clear-contentunit" />
-<% end %>
+<hr class="clear-contentunit" />
 <div class="column1-unit">
 	<%= error_messages_for :tournament %>
 </div>
-<% unless @league.errors.empty? %>
-	<hr class="clear-contentunit" />
+<hr class="clear-contentunit" />
 <% end %>
 
 <div class="column1-unit">
-	<% form_for(@tournament, :url => league_tournament_path(@league, @tournament)) do |f| %>
-		<%= f.hidden_field :league_id %>
-
-		<p>
-			<b>Starting date and time</b><br />
-			<%= f.datetime_select :start %>
-		</p>
-
-		<p>
-			 <b>Description</b><br />
-			 <%= f.text_area :description %>
-		</p>
-
-		<p>
-			<b>Buyin</b><br />
-			<%= f.text_field :buyin %>
-		</p>
-
-		<p>
-			<%= f.submit "Create" %>
-		</p>
+	<% content_tag_for(:tr, tournament = Tournament.new, :style => "display: none;") do -%>
+		<td colspan="3">
+			<% form_for [@league, tournament] do |f| %>
+				<%= render :partial => "league_tournament_form", :object => tournament, :locals => {:f => f, :league => @league, :button_text => "Create"} %>
+			<% end %>
+		</td>
 	<% end %>
-
 	<%= link_to 'Back', league_tournaments_path(@league) %>
 </div>

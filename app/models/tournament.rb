@@ -13,7 +13,14 @@ class Tournament < ActiveRecord::Base
       end
   end
   
-  def formatted_start(format = "%a %b %d %I:%M %p")
+  def formatted_start(type = ":long")
+    format = "%a %b %d %I:%M %p"
+    case type
+    when :long
+      format = "%a %b %d %I:%M %p"
+    when :short
+      format = "%b %d"
+    end
     start.strftime(format)
   end
 end

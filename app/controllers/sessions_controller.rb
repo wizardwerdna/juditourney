@@ -4,10 +4,6 @@ class SessionsController < ApplicationController
   include AuthenticatedSystem
   skip_before_filter :login_required
 
-  def crumbs
-    [home_crumb, session_crumb]
-  end
-  
   def page_title
     "Log In"
   end
@@ -26,6 +22,7 @@ class SessionsController < ApplicationController
       redirect_back_or_default('/')
       flash[:notice] = "You are logged in as #{current_user.login}"
     else
+      flash.now[:error] = "Either your User Name or Password was incorrect."
       render :action => 'new'
     end
   end

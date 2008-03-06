@@ -8,97 +8,70 @@
 	<meta http-equiv="expires" content="3600" />
 	<meta name="revisit-after" content="2 days" />
 	<meta name="robots" content="index,follow" />
-	<meta name="publisher" content="Your publisher infos here ..." />
 	<meta name="copyright" content="Copyright (c) 2008 Andrew Greenberg and Judith Glidewell" />
-	<meta name="author" content="Design: G. Wolfgang www.1-2-3-4.info / Author: Andrew Greenberg and Judith Glidewell" />
+	<meta name="author" content="Andrew Greenberg and Judith Glidewell" />
 	<meta name="distribution" content="global" />
 	<meta name="description" content="Amarillo Poker Bratz Tournament Database for the Bad Beat Bratz and the Bandit Bratz Poker Leagues" />
 	<meta name="keywords" content="poker tournament database amarillo bad beat bratz bandit bratz" />
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 	<%= stylesheet_link_tag 'scaffold', :media => :all %>
+	<%= stylesheet_link_tag 'auto_complete', :media => :all %>
 	<%= stylesheet_link_tag 'layout1_setup', :media => :all %>
 	<%= stylesheet_link_tag 'layout1_text', :media => :all %>
 	<%= javascript_include_tag :defaults %>
 	<title><%= @page_title %></title>
-
 </head>
 
 <!-- Global IE fix to avoid layout crash when single word size wider than column width -->
 <!--[if IE]><style type="text/css"> body {word-wrap: break-word;}</style><![endif]-->
 
 <body>
-	<!-- Main Page Container -->
 	<div class="page-container">
-
-	 <!-- For alternative headers START PASTE here -->
-
-	  <!-- A. HEADER -->      
 	  <div class="header">
-    
-	    <!-- A.2 HEADER MIDDLE -->
 	    <div class="header-middle">    
-			<!-- Site message -->
 			<div class="sitemessage">
 				<h1>AMARILLO POKER BRATZ</h1>
 				<h2>Tournament Results</h2>
 			</div>
-			<!-- Site logotype -->
 			<div class="sitelogo"></div>
 		</div>
-      
-      <!-- A.3 HEADER BOTTOM -->
-      <div class="header-bottom">
-
-        <!-- Navigation Level 2 (Drop-down menus) -->
-        <div class="nav2">
-
-          <!-- Navigation item -->
-          <ul>
-            <li><a href="http://www.badbeatbratz.com">Home</a></li>
-          </ul>
-
-		  <% for league in League.find(:all) %>
-            <!-- Navigation item -->
-			<ul>
-		  	<li><a href="<%= league_path league %>"><%= league.name %><!--[if IE 7]><!--></a><!--<![endif]-->
-			</ul>
-		  <% end %>
-
-          <!-- Navigation item -->
-          <ul>
-            <li><a href="/players">Players<!--[if IE 7]><!--></a><!--<![endif]-->
-          </ul>
-
-		  <% if logged_in? %>
-	          <!-- Navigation item -->
-	          <ul>
-	            <li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
-	              <!--[if lte IE 6]><table><tr><td><![endif]-->
-	                <ul>
-	                  <li><a href="/players">Players</a></li>
-	                  <li><a href="/leagues">Leagues</a></li>
-	                  <li><a href="/tournaments">Tournaments</a></li>
-	                  <li><a href="/entries">Entries</a></li>
-	                </ul>
-	              <!--[if lte IE 6]></td></tr></table></a><![endif]-->
-	            </li>
-	          </ul>          
-
-	          <!-- Navigation item -->
-	          <ul>
-	            <li><a href="/sessions/destroy">Logout: <%=current_user.login%><!--[if IE 7]><!--></a><!--<![endif]-->
-	            </li>
-	          </ul>
-          <% end %>
-        </div>
-	  </div>
-
-      <!-- A.4 HEADER BREADCRUMBS -->
-      <!-- Breadcrumbs -->
-      <div class="header-breadcrumbs">
+		<div class="header-bottom">
+			<div class="nav2">
+				<ul>
+					<li><a href="http://www.badbeatbratz.com">Home</a></li>
+				</ul>
+				<% for league in League.find(:all) %>
+				<ul>
+			  		<li><a href="<%= league_path league %>"><%= league.name %><!--[if IE 7]><!--></a><!--<![endif]-->
+				</ul>
+			  	<% end %>
+				<ul>
+					<li><a href="/players">Players<!--[if IE 7]><!--></a><!--<![endif]-->
+				</ul>
+				<% if logged_in? %>
+				<ul>
+					<li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
+						<!--[if lte IE 6]><table><tr><td><![endif]-->
+						<ul>
+						  <li><a href="/players">Players</a></li>
+						  <li><a href="/leagues">Leagues</a></li>
+						  <li><a href="/tournaments">Tournaments</a></li>
+						  <li><a href="/entries">Entries</a></li>
+						</ul>
+						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+					</li>
+				</ul>          
+				<ul>
+				  <li><a href="/sessions/destroy">Logout: <%=current_user.login%><!--[if IE 7]><!--></a><!--<![endif]-->
+				  </li>
+				</ul>
+				<% end %>
+			</div>
+		</div>
+		<div class="header-breadcrumbs">
 			<div class="breadcrumbs">
-				<%= breadcrumbs_for @crumbs %>
+				<%= yield :breadcrumbs %>
 			</div>
 			<%= auto_complete_stylesheet %>
 			<div class="searchform">
@@ -110,31 +83,21 @@
 				</fieldset>
 				<% end %>
 				<%= auto_complete_field('player_full_name_field',
-				                        :update => 'auto_complete_list', 
-				                        :url => "/players/auto_complete_for_player_full_name",
-				                        :tokens => ',') %>
+										:update => 'auto_complete_list', 
+										:url => "/players/auto_complete_for_player_full_name",
+										:tokens => ',') %>
 				<span id="new_player"></span>
 			</div>
 		</div>
     </div>
-	 <!-- For alternative headers END PASTE here -->
 
-	 <!-- B. MAIN -->
 	<div class="main">  
-		<!-- B.1 MAIN CONTENT -->
 		<div class="main-content">
-			<% if flash[:notice] %>
-				<div class="column1-unit" style="background-color: lightgreen; outline: 1px darkgreen solid; magin: 2px 2px 2px 2px; padding: 2px 2px 2px 2px">
-					<%= flash[:notice] %>
-				</div>
-			<% end %>
-
+			<%= display_flash %>
 			<h1 class="pagetitle"><%= @page_title %></h1>
 		    <%= yield %>
 		</div>
 	</div>
-
-    <!-- C. FOOTER AREA -->      
 
     <div class="footer">
       <p>Copyright &copy; 2008 Andrew Greenberg and Judi Glidewell | All Rights Reserved</p>

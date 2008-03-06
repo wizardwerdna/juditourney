@@ -1,9 +1,5 @@
 class PlayersController < ApplicationController
   
-  def crumbs
-    [home_crumb, players_crumb]
-  end
-  
   # GET /players
   # GET /players.xml
   def index

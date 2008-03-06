@@ -9,6 +9,7 @@ describe "/players/show.html.erb" do
     @player.stub!(:last).and_return("MyString")
     @player.stub!(:image_url).and_return("MyString")
     @player.stub!(:description).and_return("MyText")
+    @player.stub!(:full_name).and_return("MyString")
     
     # assigns[:player] = @player
   end

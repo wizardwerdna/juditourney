@@ -1,0 +1,9 @@
+<ul>
+	<% unless breadcrumbs.empty? %>
+	<% last_crumb = breadcrumbs.pop %>
+	<% for breadcrumb in breadcrumbs do %>
+	<li><a href="<%= breadcrumb[:url] %>"><%= breadcrumb[:name] %></a></li>
+	<% end %>
+	<li><%= last_crumb[:name] %></li>
+	<% end %>
+</ul>

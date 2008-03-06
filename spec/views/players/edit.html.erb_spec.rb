@@ -7,6 +7,7 @@ describe "/players/edit.html.erb" do
     @player = mock_model(Player)
     @player.stub!(:first).and_return("MyString")
     @player.stub!(:last).and_return("MyString")
+    @player.stub!(:full_name).and_return("MyString")
     @player.stub!(:image_url).and_return("MyString")
     @player.stub!(:description).and_return("MyText")
     @errors = mock_model(ActiveRecord::Errors)

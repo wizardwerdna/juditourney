@@ -1,3 +1,5 @@
+<% breadcrumbs_for home_crumb, leagues_crumb, league_crumb(@tournament.league), 
+	league_tournament_crumb(@tournament.league, @tournament), tournament_entry_crumb(@tournament, @entry) %>
 <h1 class="block">Entries on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %>
 </h1>
 <div class="column1-unit">

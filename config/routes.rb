@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resources :players
+  
+  map.resources :league_details
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -1,0 +1,12 @@
+<% content_tag_for(:tr, league_tournament_item) do -%>
+	<td><%= link_to league_tournament_item.formatted_start, league_tournament_path(league, league_tournament_item) %></td>
+	<td><%=h league_tournament_item.description %></td>
+	<td><%=h league_tournament_item.buyin %></td>
+	<% if logged_in? -%>
+	<td>
+		<%= link_to 'Show', [league, league_tournament_item] %> |
+		<%= link_to 'Edit', edit_league_tournament_path(league, league_tournament_item) %> |
+		<%= link_to 'Destroy', [league, league_tournament_item], :confirm => 'Are you sure?', :method => :delete %>
+	</td>
+	<% end -%>
+<% end -%>
