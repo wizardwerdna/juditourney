@@ -10,12 +10,12 @@
 </div>
 <hr class="clear-contentunit" />
 
-<h1 class="block"><%= @league.name %></h1>
+<h1 class="block">League Standings and Tournament Results</h1>
 <div class="column1-unit">
 	<table>
 	<tr>
 		<th class="pic"></th>
-		<th></th>
+		<th>Player</th>
 		<th class="short">Points</th>
 		<% for tournament in @report[:tournaments] %>
 		<th class="short"><A href="<%= league_tournament_path(@league, tournament) %>"><%= tournament.formatted_start(:short) %></A></th>
