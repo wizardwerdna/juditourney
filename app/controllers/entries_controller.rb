@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_filter :load_resource_finder
+  prepend_before_filter :load_resource_finder, :set_page_title
   
   # GET /entries
   # GET /entries.xml
