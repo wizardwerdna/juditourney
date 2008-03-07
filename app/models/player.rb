@@ -50,6 +50,6 @@ class Player < ActiveRecord::Base
   end
   
   def image_url_link
-    "<IMG SRC=\"#{image_url || "/images/players/_default.jpg"}\" />"
+    "<IMG SRC=\"#{image_url.blank? "/images/players/_default.jpg" : image_url}\" />"
   end
 end
