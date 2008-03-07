@@ -12,14 +12,8 @@
 
 	<% for player in @players %>
 	  <tr>
-	    <td class="pic">
-			<% if player.image_url %>
-				<IMG style="width:36px; align:center;" SRC = "<%=player.image_url%>"/>
-			<% end %>
-		</td>
-		<td>
-			<%= link_to player.full_name, player %>
-		</td>
+	    <td class="pic"><%= player.image_url_link%></td>
+		<td><%= link_to player.full_name, player %></td>
 		<% if logged_in? %>
 	    <td><%= link_to 'Edit', edit_player_path(player) %> |
 	    	<%= link_to 'Destroy', player, :confirm => 'Are you sure?', :method => :delete %>
