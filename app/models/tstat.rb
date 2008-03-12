@@ -29,7 +29,7 @@ class Tstat < ActiveRecord::Base
   def average_m
     return nil if average_chips.nil? or pot_size.nil?
     return nil if pot_size.zero?
-    average_chips / pot_size
+    (1.0 * average_chips / pot_size).round(1).to_s
   end
   
   def final_table_average_chips
@@ -40,13 +40,13 @@ class Tstat < ActiveRecord::Base
   def hero_q
     return nil if hero_chips.nil? or average_chips.nil?
     return nil if average_chips.zero?
-    hero_chips / average_chips
+    (1.0 * hero_chips / average_chips).round(2).to_s
   end
   
   def hero_m
     return nil if hero_chips.nil? or pot_size.nil?
     return nil if pot_size.zero?
-    hero_chips / pot_size
+    (1.0 * hero_chips / pot_size).round(1).to_s
   end
   
   def report

@@ -63,7 +63,7 @@ class TstatsController < ApplicationController
     respond_to do |format|
       if @tstat.update_attributes(params[:tstat])
         flash[:notice] = 'Tstat was successfully updated.'
-        format.html { redirect_to(@tstat) }
+        format.html { redirect_to(edit_tstat_url(@tstat)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
