@@ -1,5 +1,5 @@
 /*************************************************************/
-/*   Design:   Multiflex-3 Update-2 / Layout-1               */
+/*   Design:   M tiflex-3 Update-2 / Layout-1               */
 /*   File:     Text formats                                  */
 /*-----------------------------------------------------------*/
 /*   Author:   G. Wolfgang                                   */
@@ -45,10 +45,10 @@
 .main-content table td.short {width:75px; align:center;}
 p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,80,80); font-size:110%;}
 
-.main-content ul {list-style:none; margin:0.5em 0 1.0em 0;}
-.main-content ul li {margin:0 0 0.2em 2px; padding:0 0 0 12px; background:url(/images/bg_bullet_full_1.gif) no-repeat 0 0.5em; line-height:1.4em; font-size:120%;}
-.main-content ol {margin:0.5em 0 1.0em 20px !important /*Non-IE6*/; margin:0.5em 0 1.0em 25px /*IE6*/;}
-.main-content ol li {list-style-position:outside; margin:0 0 0.2em 0; line-height:1.4em; font-size:120%;}
+.main-content2 ul {list-style:none; margin:0.5em 0 1.0em 0;}
+.main-content2 ul li {margin:0 0 0.2em 2px; padding:0 0 0 12px; background:url(/images/bg_bullet_full_1.gif) no-repeat 0 0.5em; line-height:1.4em; font-size:120%;}
+.main-content2 ol {margin:0.5em 0 1.0em 20px !important /*Non-IE6*/; margin:0.5em 0 1.0em 25px /*IE6*/;}
+.main-content2 ol li {list-style-position:outside; margin:0 0 0.2em 0; line-height:1.4em; font-size:120%;}
 
 .contactform {width:418px; margin:2.0em 0 0 0; padding:10px 10px 0 10px; border:solid 1px rgb(200,200,200); background-color:rgb(240,240,240);}
 .contactform fieldset {padding:20px 0 0 0 !important /*Non-IE6*/; padding:0 /*IE6*/; margin:0 0 20px 0; border:solid 1px rgb(220,220,220);}
@@ -84,3 +84,21 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 
 .main a img {border:solid 1px rgb(150,150,150);}
 .main a:hover img {border:solid 1px rgb(220,220,220);}
+
+.tile-list {list-style: none;}
+.entries-tile {width:500px; outline: 1px solid black;  background-color: #eaeaea; min-width:500px; margin: 5px;}
+.tile-square-numbox { 
+	height:50px; width:50px;
+	text-align:center; 
+	background-color: #aaaaaa; color: white;
+	line-height:50px;
+	font-size:30px;
+	float:left;
+}
+.tile-textbox {height:50px; float:left; background-color: transparent;}
+.tile-picbox {height:50px; float:left;}
+.tile-picbox img {height:50px; margin:0; padding:0; border: 0;}
+.tile-top-line {height: 30px; line-height: 30px; font-weight: bold; font-size: 20px; text-align: left; margin-left: 10px;}
+.tile-bottom-line {height: 20px; line-height: 20px; font-size: 12px;}
+.tile-bottom-left { margin-left: 10px; margin-right:10px;; float: left; width: 160px; text-align: left;}
+.tile-bottom-right { margin-left: 10px; margin-right:10px; float: left; width:160px; text-align: right;}

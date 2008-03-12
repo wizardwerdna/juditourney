@@ -42,7 +42,7 @@ class League < ActiveRecord::Base
   end
   
   def detail_report_data
-    @entries = self.entries
+    @entries = self.entries.reject{|each| each.player.nil? }
     @players = @entries.collect{|each| each.player}.uniq
     @tournaments = @entries.collect{|each| each.tournament}.uniq
     @results = {}

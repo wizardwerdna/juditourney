@@ -1,0 +1,17 @@
+<style type="text/css" media="screen">
+.tile-picbox img {height:50px; margin:0; padding:0; border: 0;}
+</style>
+<div id='<%=id_prefix%>entries-<%=entry.id%>' class="entries-tile">
+	<div class="tile-square-numbox" id="dome2"><%= entry.result %></div>
+	<div class="tile-picbox"><%= entry.player.image_url_link %></div>
+	<div class="tile-textbox">
+		<div class="tile-top-line"><%= link_to entry.player.full_name, entry.player %></div>
+		<div class="tile-bottom-line">
+			<div class="tile-bottom-left">
+				<%= entry.paid.blank? or entry.paid == 0 ? "-- Not Bought In --" : "Paid: $#{entry.paid}"-%><%= ("; Payout: $" + entry.payout.to_s) if entry.payout and entry.payout > 0 %>
+			</div>
+			<div class="tile-bottom-right"><strong><%=entry.points%> points</strong></div>
+		</div>
+	</div>
+	<div style="clear: both"></div>
+</div>
