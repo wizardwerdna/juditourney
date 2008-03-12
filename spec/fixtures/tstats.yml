@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  hero_chips: 1
+  small_blind: 1
+  big_blind: 1
+  ante: 1
+  current_table_size: 1
+  number_of_players_left: 1
+  number_of_players_at_start: 1
+  starting_chips: 1
+  added_chips: 1
+  maximum_table_size: 1
+
+two:
+  hero_chips: 1
+  small_blind: 1
+  big_blind: 1
+  ante: 1
+  current_table_size: 1
+  number_of_players_left: 1
+  number_of_players_at_start: 1
+  starting_chips: 1
+  added_chips: 1
+  maximum_table_size: 1

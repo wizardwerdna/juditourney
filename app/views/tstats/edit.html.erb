@@ -1,0 +1,74 @@
+<h1>Editing tstat</h1>
+
+<%= error_messages_for :tstat %>
+
+<style>
+	.newstatbox {
+		float:left;
+		height:50px;
+		width:100px;
+		text-align: center;
+		line-height: 50px;
+		color: white;
+		background-color: #dddddd;
+		font-size: 25px;
+		font-weight: bold;
+		outline: 1px solid black;
+	}
+</style>
+
+<div class="column1-unit">
+	<div class="newstatbox">
+		M <%=@tstat.hero_m%>
+	</div>
+	<div class="newstatbox">
+		Q <%=@tstat.hero_q%>
+	</div>
+	<div class="newstatbox">
+		TM <%=@tstat.average_m%>
+	</div>
+	<div class="newstatbox">
+		<%=@tstat.average_chips%>
+	</div>
+	<div class="newstatbox">
+		<%=@tstat.final_table_average_chips%>
+	</div>
+</div>
+
+<hr class="clear-contentunits">
+
+<div class="column1-unit">
+<% form_for(@tstat) do |f| %>
+  <p>
+    <b>Hero chips</b><br />
+    <%= f.text_field :hero_chips %>
+  </p>
+
+  <p>
+    <b>Blinds and antes</b><br />
+    Small: <%= f.text_field :small_blind %> big: <%= f.text_field :big_blind %> ante per player: <%= f.text_field :ante %>
+  </p>
+
+  <p>
+    <b>Players at table</b><br />
+    Now: <%= f.text_field :current_table_size %> of Max: <%= f.text_field :maximum_table_size %>
+  </p>
+
+  <p>
+    <b>Number of players in tournament</b><br />
+    Remaining: <%= f.text_field :number_of_players_left %> of: <%= f.text_field :number_of_players_at_start %>
+  </p>
+
+  <p>
+    <b>Chips</b><br />
+    Starting stack per player: <%= f.text_field :starting_chips %> Added from rebuys/addons: <%= f.text_field :added_chips %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tstat %> |
+<%= link_to 'Back', tstats_path %>
+</div>

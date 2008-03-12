@@ -47,8 +47,8 @@
 <h1 class="block">Financials</h1>
 <div class="column1-unit">
 	<table>
-	<tr><th>Revenues:</th><td><%= r = @tournament.entries.inject(0){|sum,e| sum + e.paid} %></td></tr>
-	<tr><th>Less Payouts:</th><td><%= p = @tournament.entries.inject(0){|sum,e| sum + e.payout} %></td></tr>
+	<tr><th>Revenues:</th><td><%= r = @tournament.entries.inject(0){|sum,e| sum + (e.paid || 0)} %></td></tr>
+	<tr><th>Less Payouts:</th><td><%= p = @tournament.entries.inject(0){|sum,e| sum + (e.payout || 0)} %></td></tr>
 	<tr><th>Net to Prize Fund:</th><td><%= r - p %></td></tr>
 	</table>
 </div>

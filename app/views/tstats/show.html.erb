@@ -1,0 +1,53 @@
+<p>
+  <b>Hero chips:</b>
+  <%=h @tstat.hero_chips %>
+</p>
+
+<p>
+  <b>Small blind:</b>
+  <%=h @tstat.small_blind %>
+</p>
+
+<p>
+  <b>Big blind:</b>
+  <%=h @tstat.big_blind %>
+</p>
+
+<p>
+  <b>Ante:</b>
+  <%=h @tstat.ante %>
+</p>
+
+<p>
+  <b>Current table size:</b>
+  <%=h @tstat.current_table_size %>
+</p>
+
+<p>
+  <b>Number of players left:</b>
+  <%=h @tstat.number_of_players_left %>
+</p>
+
+<p>
+  <b>Number of players at start:</b>
+  <%=h @tstat.number_of_players_at_start %>
+</p>
+
+<p>
+  <b>Starting chips:</b>
+  <%=h @tstat.starting_chips %>
+</p>
+
+<p>
+  <b>Added chips:</b>
+  <%=h @tstat.added_chips %>
+</p>
+
+<p>
+  <b>Maximum table size:</b>
+  <%=h @tstat.maximum_table_size %>
+</p>
+
+
+<%= link_to 'Edit', edit_tstat_path(@tstat) %> |
+<%= link_to 'Back', tstats_path %>

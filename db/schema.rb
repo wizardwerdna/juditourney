@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "entries", :force => true do |t|
     t.integer  "tournament_id"
@@ -42,6 +42,21 @@ ActiveRecord::Schema.define(:version => 7) do
     t.datetime "start"
     t.text     "description"
     t.integer  "buyin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tstats", :force => true do |t|
+    t.integer  "hero_chips"
+    t.integer  "small_blind"
+    t.integer  "big_blind"
+    t.integer  "ante"
+    t.integer  "current_table_size"
+    t.integer  "number_of_players_left"
+    t.integer  "number_of_players_at_start"
+    t.integer  "added_chips"
+    t.integer  "starting_chips"
+    t.integer  "maximum_table_size"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
