@@ -1,0 +1,7 @@
+<li id = '<%=id_prefix%>entry_<%=entry.id%>' class='entries-row'>
+	<div id='<%=id_prefix%>entry_<%=entry.id%>_tile' class="entries-tile">
+		<% remote_form_for([tournament, entry]) do |f| -%>
+		<%= render :partial => 'entries_form', :object => f, :locals => {:tournament => tournament, :entry => entry, :button => "Update" }%>
+		<% end -%>
+	</div>
+</li>

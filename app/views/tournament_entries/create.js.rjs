@@ -1,0 +1,3 @@
+page['error_messages'].replace :partial => 'error_messages'
+page.insert_html :after, @after_id, :partial => 'entries_tile_row', :locals => {:tournament => @tournament, :entry => @entry, :id_prefix => ''}
+page[@entry].visual_effect :highlight

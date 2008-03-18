@@ -2,13 +2,13 @@
 	league_tournament_crumb(@tournament.league, @tournament), tournament_entry_crumb(@tournament, @entry) %>
 <h1 class="block">Entries on <%= link_to @tournament.formatted_start, league_tournament_path(@tournament.league, @tournament) %>
 </h1>
+<%= render :partial => 'error_messages' %>
 <div class="column1-unit">
-	<ul class="tile-list">
-				
+	<%= render :partial => 'new_form', :locals => {:tournament => @tournament, :entry => @entry} %>
+	<ul id="tile-list" class="tile-list" style="float:left">
+		<li id="sentry" style="display:none">This is a sentry</li>
 		<% for entry in @tournament.entries.sort{|e1, e2| (e1.result || 0) <=> (e2.result || 0) } do -%>
-		<li "entries-row">
-			<%= render :partial => "entries_tile", :locals => {:entry => entry, :id_prefix => ''} %>
-		</li>
+			<%= render :partial => "entries_tile_row", :locals => {:tournament => @tournament, :entry => entry, :id_prefix => ''} %>
 		<% end -%>
 	</ul>
 </div>

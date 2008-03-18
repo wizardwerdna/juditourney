@@ -37,6 +37,9 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1/edit
   def edit
     @tournament = @resource_finder.find(params[:id])
+    respond_to do |format|
+      format.html # new.html.erb
+    end
   end
 
   # POST /tournaments

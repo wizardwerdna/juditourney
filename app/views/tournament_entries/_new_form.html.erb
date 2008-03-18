@@ -1,0 +1,8 @@
+<% if logged_in? -%>
+<div style="float:right; outline: 2px solid #888888; margin: 5px; padding: 2px; background-color: #eaeaea;">
+	<p><Strong>New Entry for Tournament:</strong></p>
+	<% remote_form_for([@tournament, entry]) do |f| -%>
+	<%= render :partial => 'entries_form', :object => f, :locals => {:tournament => @tournament, :entry => entry, :button => "Create" }%>
+	<% end -%>
+</div>
+<% end -%>

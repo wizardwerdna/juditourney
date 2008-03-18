@@ -1,0 +1,2 @@
+page['error_messages'].replace :partial => 'error_messages'
+page['error_messages'].visual_effect :shake

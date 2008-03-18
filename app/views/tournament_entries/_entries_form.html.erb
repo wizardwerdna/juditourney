@@ -1,0 +1,36 @@
+<%= entries_form.hidden_field :tournament_id %>
+
+<!-- <p>
+  <b>Player</b> or <%= link_to 'Add new Player', new_player_path %><br />
+  <%= entries_form.select :player_id, tournament.league.player_select_list %>
+</p> -->
+
+<p>
+  <b>Player Name</b><br />
+  <%= entries_form.text_field :player_full_name, :autocomplete => "off", :id => "player_full_name_field_2" %>
+  <div class='auto_complete' id='auto_complete_list_2'></div>
+</p>	
+
+<p>
+  <b>Paid</b><br />
+  <%= entries_form.text_field :paid %>
+</p>
+
+<p>
+  <b>Result</b><br />
+  <%= entries_form.text_field :result %>
+</p>
+
+<p>
+  <b>Payout</b><br />
+  <%= entries_form.text_field :payout %>
+</p>
+
+<p>
+  <%= entries_form.submit button %>
+</p>
+
+<%= auto_complete_field('player_full_name_field_2',
+                        :update => 'auto_complete_list_2', 
+                        :url => '/players/auto_complete_for_entry_player_full_name',
+                        :tokens => ',') %>

@@ -11,36 +11,7 @@
 
 <div "column1-unit">
 	<% form_for(@entry, :url => tournament_entry_path(@tournament, @entry)) do |f| %>
-		<%= f.hidden_field :tournament_id %>
-
-		<!-- <p>
-		  <b>Player</b> or <%= link_to 'Add new Player', new_player_path %><br />
-		  <%= f.select :player_id, @tournament.league.player_select_list %>
-		</p> -->
-		
-		<p>
-		  <b>Player Name</b><br />
-		  <%= f.text_field :player_full_name %>
-		</p>	
-
-		<p>
-		  <b>Paid</b><br />
-		  <%= f.text_field :paid %>
-		</p>
-
-		<p>
-		  <b>Result</b><br />
-		  <%= f.text_field :result %>
-		</p>
-
-		<p>
-		  <b>Payout</b><br />
-		  <%= f.text_field :payout %>
-		</p>
-
-		<p>
-		  <%= f.submit "Update" %>
-		</p>
+		<%= render :partial => 'entries_form', :object => f, :locals => {:tournament => @tournament, :entry -> @entry, :button => "Update"}%>
 	<% end %>
 
 	<%= link_to 'Show', tournament_entry_path(@tournament, @entry) %> |
