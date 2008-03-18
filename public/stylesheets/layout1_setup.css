@@ -16,7 +16,7 @@
 /************/
 
 /* NON-HEADER */
-*{padding:0; margin:0;}
+ * {padding:0; margin:0;}
  body {font-size:62.5%; background-color:rgb(255,255,255); font-family:verdana,arial,sans-serif;} /*Font-size: 1.0em = 10px when browser default size is 16px*/
 .page-container {width:900px; margin:0px auto; margin-top:10px; margin-bottom:10px; border:solid 1px rgb(150,150,150); font-size:1.0em;}
 .main {clear:both; width:900px; padding-bottom:30px; background:transparent url(/images/bg_main_withoutnav.jpg) repeat-y;}
@@ -143,4 +143,5 @@
 @media print {.main {clear:both; width:900px; padding-bottom:30px; background:transparent;}}
 @media print {.footer {clear:both; width:900px; height:3.7em; padding:1.1em 0 0; background:rgb(240,240,240); font-size:1.0em; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}}
 
-html {filter: expression(document.execCommand("BackgroundImageCache", false, true));} /*IE proprietary flicker hack for background images. Not validating, but OK*/
+/* commented out because it was causing problems with IE6 validation -- may need to reup
+/html {filter: expression(document.execCommand("BackgroundImageCache", false, true));} /*IE proprietary flicker hack for background images. Not validating, but OK*/

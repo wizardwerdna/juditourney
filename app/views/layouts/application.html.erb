@@ -1,6 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="cache-control" content="no-cache" />
@@ -42,7 +41,7 @@
 				</ul>
 				<% for league in League.find(:all) %>
 				<ul>
-			  		<li><a href="<%= league_path league %>"><%= league.name %></a></li>
+					<li><a href="<%= league_path league %>"><%= league.name %></a></li>
 				</ul>
 			  	<% end %>
 				<ul>
@@ -50,20 +49,19 @@
 				</ul>
 				<% if logged_in? %>
 				<ul>
-					<li><a href="#">Databases</a>
+					<li><a href="#">Databases</a><!--[if IE 7]><!--></a><!--<![endif]-->
 						<!--[if lte IE 6]><table><tr><td><![endif]-->
 						<ul>
-						  <li><a href="/players">Players</a></li>
-						  <li><a href="/leagues">Leagues</a></li>
-						  <li><a href="/tournaments">Tournaments</a></li>
-						  <li><a href="/entries">Entries</a></li>
+							<li><a href="/players">Players</a></li>
+							<li><a href="/leagues">Leagues</a></li>
+							<li><a href="/tournaments">Tournaments</a></li>
+							<li><a href="/entries">Entries</a></li>
 						</ul>
 						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 					</li>
 				</ul>          
 				<ul>
-				  <li><a href="/sessions/destroy">Logout: <%=current_user.login%></a>
-				  </li>
+					<li><a href="/sessions/destroy">Logout: <%=current_user.login%></a></li>
 				</ul>
 				<% end %>
 			</div>
@@ -78,7 +76,7 @@
 				<fieldset>
 					<%= f.text_field :full_name, :class => "field", :autocomplete => "off", :id => "player_full_name_field" %>
 					<div class='auto_complete' id='auto_complete_list'></div>
-	             	<input type="submit" value="GO!" name="button" id="button" class="button"/>
+					<input type="submit" value="GO!" name="button" id="button" class="button"/>
 				</fieldset>
 				<% end %>
 				<%= auto_complete_field('player_full_name_field',
