@@ -1,2 +1,1 @@
-logger.error "in the edit.js.rjs code"
 page[@entry].replace_html :partial => 'edit_form', :locals => {:tournament => @tournament, :entry => @entry, :id_prefix => ""}

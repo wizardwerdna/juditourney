@@ -3,6 +3,19 @@ class LeagueTournamentsController < TournamentsController
   def page_title
     "#{@league.name} Tournaments"
   end
+  
+  # GET /tournaments/1
+  # GET /tournaments/1.xml
+  def show
+    @tournament = @resource_finder.find(params[:id])
+    @entry = Entry.new
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @tournament }
+    end
+  end
+  
  
   protected
   

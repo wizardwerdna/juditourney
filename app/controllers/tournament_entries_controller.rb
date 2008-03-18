@@ -21,10 +21,7 @@ class TournamentEntriesController < EntriesController
           flash[:notice] = "Entry for #{@entry.player.full_name} was entered."
           format.html { redirect_to_new_resource }
           format.xml  { render :xml => @entry, :status => :created, :location => @entry }
-          format.js {
-            record = @resource_finder.find(:first, :conditions => ['result < ?', @entry.result], :order => 'result desc')
-            @after_id = (record && dom_id(record)) || 'sentry'
-          }
+          format.js { @after_id = dom_id_of_tile_to_insert_after_for(@resource_finder, @entry) }
         else
           format.html { render :action => "new" }
           format.xml  { render :xml => @entry.errors, :status => :unprocessable_entity }
@@ -41,10 +38,7 @@ class TournamentEntriesController < EntriesController
           flash[:notice] = 'Entry was successfully updated.'
           format.html { redirect_to_resource }
           format.xml  { head :ok }
-          format.js {
-            record = @resource_finder.find(:first, :conditions => ['result < ?', @entry.result], :order => 'result desc')
-            @after_id = (record && dom_id(record)) || 'sentry'
-          }
+          format.js { @after_id = dom_id_of_tile_to_insert_after_for(@resource_finder, @entry) }
         else
           format.html { render :action => "edit" }
           format.xml  { render :xml => @entry.errors, :status => :unprocessable_entity }
