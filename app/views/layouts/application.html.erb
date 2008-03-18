@@ -49,7 +49,7 @@
 				</ul>
 				<% if logged_in? %>
 				<ul>
-					<li><a href="#">Databases</a><!--[if IE 7]><!--></a><!--<![endif]-->
+					<li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
 						<!--[if lte IE 6]><table><tr><td><![endif]-->
 						<ul>
 							<li><a href="/players">Players</a></li>
@@ -59,7 +59,7 @@
 						</ul>
 						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 					</li>
-				</ul>          
+				</ul></a>          
 				<ul>
 					<li><a href="/sessions/destroy">Logout: <%=current_user.login%></a></li>
 				</ul>

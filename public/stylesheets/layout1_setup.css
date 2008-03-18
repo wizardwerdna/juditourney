@@ -143,5 +143,4 @@
 @media print {.main {clear:both; width:900px; padding-bottom:30px; background:transparent;}}
 @media print {.footer {clear:both; width:900px; height:3.7em; padding:1.1em 0 0; background:rgb(240,240,240); font-size:1.0em; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}}
 
-/* commented out because it was causing problems with IE6 validation -- may need to reup
 /html {filter: expression(document.execCommand("BackgroundImageCache", false, true));} /*IE proprietary flicker hack for background images. Not validating, but OK*/
