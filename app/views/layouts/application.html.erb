@@ -26,80 +26,79 @@
 
 <body>
 	<div class="page-container">
-	  <div class="header">
-	    <div class="header-middle">    
-			<div class="sitemessage">
-				<h1>AMARILLO POKER BRATZ</h1>
-				<h2>Tournament Results</h2>
+		<div class="header">
+			<div class="header-middle">    
+				<div class="sitemessage">
+					<h1>AMARILLO POKER BRATZ</h1>
+					<h2>Tournament Results</h2>
+				</div>
+				<div class="sitelogo"></div>
 			</div>
-			<div class="sitelogo"></div>
-		</div>
-		<div class="header-bottom">
-			<div class="nav2">
-				<ul>
-					<li><a href="http://www.badbeatbratz.com">Home</a></li>
-				</ul>
-				<% for league in League.find(:all) %>
-				<ul>
-					<li><a href="<%= league_path league %>"><%= league.name %></a></li>
-				</ul>
-			  	<% end %>
-				<ul>
-					<li><a href="/players">Players</a></li>
-				</ul>
-				<% if logged_in? %>
-				<ul>
-					<li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
-						<!--[if lte IE 6]><table><tr><td><![endif]-->
-						<ul>
-							<li><a href="/players">Players</a></li>
-							<li><a href="/leagues">Leagues</a></li>
-							<li><a href="/tournaments">Tournaments</a></li>
-							<li><a href="/entries">Entries</a></li>
-						</ul>
-						<!--[if lte IE 6]></td></tr></table></a><![endif]-->
-					</li>
-				</ul>         
-				<ul>
-					<li><a href="/sessions/destroy">Logout: <%=current_user.login%></a></li>
-				</ul>
-				<% end %>
+			<div class="header-bottom">
+				<div class="nav2">
+					<ul>
+						<li><a href="http://www.badbeatbratz.com">Home</a></li>
+					</ul>
+					<% for league in League.find(:all) %>
+					<ul>
+						<li><a href="<%= league_path league %>"><%= league.name %></a></li>
+					</ul>
+				  	<% end %>
+					<ul>
+						<li><a href="/players">Players</a></li>
+					</ul>
+					<% if logged_in? %>
+					<ul>
+						<li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
+							<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<ul>
+								<li><a href="/players">Players</a></li>
+								<li><a href="/leagues">Leagues</a></li>
+								<li><a href="/tournaments">Tournaments</a></li>
+								<li><a href="/entries">Entries</a></li>
+							</ul>
+							<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+					</ul>         
+					<ul>
+						<li><a href="/sessions/destroy">Logout: <%=current_user.login%></a></li>
+					</ul>
+					<% end %>
+				</div>
 			</div>
-		</div>
-		<div class="header-breadcrumbs">
-			<div class="breadcrumbs">
-				<%= yield :breadcrumbs %>
+			<div class="header-breadcrumbs">
+				<div class="breadcrumbs">
+					<%= yield :breadcrumbs %>
+				</div>
+				<div class="searchform">
+					<% form_for :player, :url => '/players/search' do |f| %>
+					<fieldset>
+						<%= f.text_field :full_name, :class => "field", :autocomplete => "off", :id => "player_full_name_field" %>
+						<div class='auto_complete' id='auto_complete_list'></div>
+						<input type="submit" value="GO!" name="button" id="button" class="button"/>
+					</fieldset>
+					<% end %>
+					<span id="new_player"></span>
+				</div>
 			</div>
-			<%= auto_complete_stylesheet %>
-			<div class="searchform">
-				<% form_for :player, :url => '/players/search' do |f| %>
-				<fieldset>
-					<%= f.text_field :full_name, :class => "field", :autocomplete => "off", :id => "player_full_name_field" %>
-					<div class='auto_complete' id='auto_complete_list'></div>
-					<input type="submit" value="GO!" name="button" id="button" class="button"/>
-				</fieldset>
-				<% end %>
-				<%= auto_complete_field('player_full_name_field',
-										:update => 'auto_complete_list', 
-										:url => "/players/auto_complete_for_player_full_name",
-										:tokens => ',') %>
-				<span id="new_player"></span>
-			</div>
-		</div>
-    </div>
+	    </div>
 
-	<div class="main">  
-		<div class="main-content">
-			<%= display_flash %>
-			<h1 class="pagetitle"><%= @page_title %></h1>
-		    <%= yield %>
+		<div class="main">  
+			<div class="main-content">
+				<%= display_flash %>
+				<h1 class="pagetitle"><%= @page_title %></h1>
+			    <%= yield %>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>Copyright &copy; 2008 Andrew Greenberg and Judi Glidewell | All Rights Reserved</p>
+			<p class="credits">Powered by Ruby on Rails | <a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML code">W3C XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/" title="Validate CSS code">W3C CSS 2.0</a></p>
 		</div>
 	</div>
-
-    <div class="footer">
-      <p>Copyright &copy; 2008 Andrew Greenberg and Judi Glidewell | All Rights Reserved</p>
-      <p class="credits">Powered by Ruby on Rails | <a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML code">W3C XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/" title="Validate CSS code">W3C CSS 2.0</a></p>
-    </div>      
-  </div>
+<%= auto_complete_field('player_full_name_field',
+						:update => 'auto_complete_list', 
+						:url => "/players/auto_complete_for_player_full_name",
+						:tokens => ',') %>
 </body>
 </html>
