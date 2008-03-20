@@ -17,7 +17,7 @@
 		<div class="standings-tile">
 			<div class="tile-square-numbox"></div>
 			<div class="tile-picbox"><IMG SRC="/images/players/_default.jpg"></div>
-			<div class="tile-textbox">
+			<div class="tile-textbox-for-standings">
 				<div class="tile-top-line"> </div>
 				<div class="tile-bottom-line">
 					<div class="tile-bottom">
@@ -37,7 +37,7 @@
 		<div id='_tile' class="standings-tile">
 			<div class="tile-square-numbox"><%=position+1%></div>
 			<div class="tile-picbox"><%= link_to player.image_url_link, player %></div>
-			<div class="tile-textbox">
+			<div class="tile-textbox-for-standings">
 				<div class="tile-top-line"><a href="<%= player_path(player) %>"><%= player.full_name %></a></div>
 				<div class="tile-bottom-line">
 					<div class="tile-bottom">

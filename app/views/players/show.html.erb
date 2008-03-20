@@ -18,7 +18,7 @@
 		</tr>
 	<% for entry in @player.entries %>
 		<tr>
-			<th><%= link_to entry.tournament.league.name + '@' + entry.tournament.formatted_start, entry.tournament %></th>
+			<th><%= link_to entry.tournament.league.name + '@' + entry.tournament.formatted_start, [entry.tournament.league, entry.tournament] %></th>
 			<th><%= entry.result %></th>
 			<th><%= entry.points %></th>
 		</tr>
