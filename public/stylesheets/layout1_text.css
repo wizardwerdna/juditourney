@@ -110,7 +110,7 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 	overflow: hidden;
 }
 .tile-square-datebox a {font-size: 11px;}
-.tile-textbox {height:50px; float:left; background-color: transparent;}
+.tile-textbox {height:50px; float:left; width:180px;}
 .tile-picbox {height:50px; width:64px; overflow: hidden; float:left;}
 .tile-picbox img {height:50px; margin:0; padding:0; border: 0; max-width: 64px; min-width: 64px; overflow: hidden;}
 .tile-top-line {height: 30px; line-height: 30px; font-weight: bold; font-size: 20px; text-align: left; margin-left: 10px;}
@@ -121,4 +121,14 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 .standings-tile {outline: 1px solid black;  background-color: #eaeaea; margin: 5px;}
 .tile-square-numbox a {font-size: 12px;}
 .tile-top-line {height: 30px; line-height: 30px; font-weight: bold; font-size: 20px; text-align: left; margin-left: 10px; max-width:200px; min-width: 200px; overflow: hidden;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
 
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
