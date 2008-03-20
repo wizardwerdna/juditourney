@@ -8,6 +8,11 @@ module ApplicationHelper
     end
     result
   end
+  
+  def rjsfunction(function_name="")
+    function_body = update_page {|p| yield p}
+    "function #{function_name}() { #{function_body} }"
+  end
 
   def breadcrumbs_for(*crumbs)
     content_for :breadcrumbs do

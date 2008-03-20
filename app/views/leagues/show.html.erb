@@ -11,36 +11,53 @@
 <hr class="clear-contentunit" />
 
 <h1 class="block">League Standings and Tournament Results</h1>
-<div class="column1-unit">
-	<table>
-	<tr>
-		<th class="pic"></th>
-		<th>Player</th>
-		<th class="short">Points</th>
-		<% for tournament in @report[:tournaments] %>
-		<th class="short"><A href="<%= league_tournament_path(@league, tournament) %>"><%= tournament.formatted_start(:short) %></A></th>
-		<% end %>
-		<th></th>
-	</tr>
-
-	<% for player in @report[:players] %>
-	<tr>
-		<td class="pic"><%= link_to player.image_url_link, player %></td>		
-		<td><a href="<%= player_path(player) %>"><%= player.full_name %></a></td>
-		<td class="short"><%= @report[:points][player] %></td>
-		<% for tournament in @report[:tournaments] %>
-		<td class="short">
-			<% if result = @report[:results][player][tournament] %>
-				<%= result.points %> / <%= result.place %>
+<div class="column1-unit" class="tiles-list">
+	<ul class="tile-list">
+	<li>
+		<div class="standings-tile">
+			<div class="tile-square-numbox"></div>
+			<div class="tile-picbox"><IMG SRC="http://localhost:3000/images/players/_default.jpg"></div>
+			<div class="tile-textbox">
+				<div class="tile-top-line"> </div>
+				<div class="tile-bottom-line">
+					<div class="tile-bottom">
+					</div>
+				</div>
+			</div>
+			<% for tournament in @report[:tournaments] -%>
+			<div class="tile-square-datebox">
+				<A href="<%= league_tournament_path(@league, tournament) %>"><%= tournament.formatted_start(:short) %></A>
+			</div>
 			<% end %>
-		</td>
-		<% end %>
-		<td></td>
-	</tr>
+			<div  style="clear: both"> </div>
+		</div>
+	</li>
+	<% @report[:players].each_with_index do |player, position| %>
+	<li>
+		<div id='_tile' class="standings-tile">
+			<div class="tile-square-numbox"><%=position+1%></div>
+			<div class="tile-picbox"><%= link_to player.image_url_link, player %></div>
+			<div class="tile-textbox">
+				<div class="tile-top-line"><a href="<%= player_path(player) %>"><%= player.full_name %></a></div>
+				<div class="tile-bottom-line">
+					<div class="tile-bottom">
+						<strong><%= @report[:points][player] %> points</strong>
+					</div>
+				</div>
+			</div>
+			<% for tournament in @report[:tournaments] %>
+			<div class="tile-square-datebox">
+				<% if result = @report[:results][player][tournament] %>
+					<%= result.points %>/<%= result.place %>
+				<% end %>
+			</div>
+			<% end %>
+			<div  style="clear: both"></div>
+		</div>
+	</li>
 	<% end %>
-	</table>
+	</ul>
 </div>
-<hr class="clear-contentunit" />
 
 <h1 class="block">League Financials</h1>
 <div class="column1-unit">

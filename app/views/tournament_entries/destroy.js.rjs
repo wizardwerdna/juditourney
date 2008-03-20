@@ -1,2 +1,1 @@
-page[@entry].visual_effect :puff
-page[@entry].remove
+page[@entry].visual_effect :puff, :afterFinish => rjsfunction {|p| p[@entry].remove}

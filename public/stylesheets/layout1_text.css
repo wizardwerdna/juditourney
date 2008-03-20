@@ -88,17 +88,37 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 .tile-list {list-style: none;}
 .entries-tile {width:500px; outline: 1px solid black;  background-color: #eaeaea; min-width:500px; margin: 5px;}
 .tile-square-numbox { 
+	outline: 1px solid black;
 	height:50px; width:50px;
 	text-align:center; 
 	background-color: #aaaaaa; color: white;
 	line-height:50px;
 	font-size:30px;
 	float:left;
+	max-width: 50px;
+	overflow: hidden;
 }
+.tile-square-datebox { 
+	outline: 1px solid black;
+	height:50px; width:50px;
+	text-align:center; 
+	background-color: #aaaaaa; color: white;
+	line-height:50px;
+	font-size:12px;
+	float:left;
+	max-width: 50px;
+	overflow: hidden;
+}
+.tile-square-datebox a {font-size: 11px;}
 .tile-textbox {height:50px; float:left; background-color: transparent;}
-.tile-picbox {height:50px; float:left;}
-.tile-picbox img {height:50px; margin:0; padding:0; border: 0;}
+.tile-picbox {height:50px; width:64px; overflow: hidden; float:left;}
+.tile-picbox img {height:50px; margin:0; padding:0; border: 0; max-width: 64px; min-width: 64px; overflow: hidden;}
 .tile-top-line {height: 30px; line-height: 30px; font-weight: bold; font-size: 20px; text-align: left; margin-left: 10px;}
-.tile-bottom-line {height: 20px; line-height: 20px; font-size: 12px;}
+.tile-top-line a {font-size: 14px;}
+.tile-bottom-line {height: 20px; line-height: 20px; font-size: 12px; margin-left: 10px;}
 .tile-bottom-left { margin-left: 10px; margin-right:10px;; float: left; width: 160px; text-align: left;}
 .tile-bottom-right { margin-left: 10px; margin-right:10px; float: left; width:160px; text-align: right;}
+.standings-tile {outline: 1px solid black;  background-color: #eaeaea; margin: 5px;}
+.tile-square-numbox a {font-size: 12px;}
+.tile-top-line {height: 30px; line-height: 30px; font-weight: bold; font-size: 20px; text-align: left; margin-left: 10px; max-width:200px; min-width: 200px; overflow: hidden;}
+
