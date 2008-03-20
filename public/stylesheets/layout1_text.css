@@ -86,9 +86,9 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 .main a:hover img {border:solid 1px rgb(220,220,220);}
 
 .tile-list {list-style: none;}
-.entries-tile {width:500px; outline: 1px solid black;  background-color: #eaeaea; min-width:500px; margin: 5px;}
+.entries-tile {width:500px; border: 1px solid black;  background-color: #eaeaea; min-width:500px; margin: 5px;}
 .tile-square-numbox { 
-	outline: 1px solid black;
+	border: 1px solid #eaeaea;
 	height:50px; width:50px;
 	text-align:center; 
 	background-color: #aaaaaa; color: white;
@@ -99,7 +99,7 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 	overflow: hidden;
 }
 .tile-square-datebox { 
-	outline: 1px solid black;
+	border: 1px solid #eaeaea;
 	height:50px; width:50px;
 	text-align:center; 
 	background-color: #aaaaaa; color: white;
@@ -118,7 +118,7 @@ p.caption {clear:both; margin:0.5em 0 2.0em 20px; text-align:left; color:rgb(80,
 .tile-bottom-line {height: 20px; line-height: 20px; font-size: 12px; margin-left: 10px;}
 .tile-bottom-left { margin-left: 10px; margin-right:10px;; float: left; width: 160px; text-align: left;}
 .tile-bottom-right { margin-left: 10px; margin-right:10px; float: left; width:160px; text-align: right;}
-.standings-tile {outline: 1px solid black;  background-color: #eaeaea; margin: 5px;}
+.standings-tile {border: 1px solid black;  background-color: #eaeaea; margin: 5px;}
 .tile-square-numbox a {font-size: 12px;}
 .tile-top-line {height: 30px; line-height: 30px; font-weight: bold; font-size: 20px; text-align: left; margin-left: 10px; max-width:200px; min-width: 200px; overflow: hidden;}
 .clearfix:after {
