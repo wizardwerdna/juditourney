@@ -41,7 +41,7 @@
 				<div class="tile-top-line"><a href="<%= player_path(player) %>"><%= player.full_name %></a></div>
 				<div class="tile-bottom-line">
 					<div class="tile-bottom">
-						<strong><%= @report[:points][player] %> points</strong>
+						<strong><%=pluralize @report[:points][player], "point"%></strong>
 					</div>
 				</div>
 			</div>

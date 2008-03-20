@@ -8,7 +8,7 @@
 				<%= entry.paid.blank? or entry.paid == 0 ? "No Buyin" : "Buyin: $#{entry.paid}"-%><%= ("; Prize: $" + entry.payout.to_s) if entry.payout and entry.payout > 0 %>
 			</div>
 			<div class="tile-bottom-right">
-				<strong><%=entry.points%> points</strong>
+				<strong><%=pluralize entry.points, "point"%></strong>
 				<% if logged_in? %>
 				| <%= link_to_remote 'Edit', :url => edit_tournament_entry_path(tournament, entry), :method => :get %> |
 				<%= link_to_remote 'Destroy', :url => [tournament, entry], :confirm => 'Are you sure?', :method => :delete %>
