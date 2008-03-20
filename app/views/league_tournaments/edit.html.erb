@@ -10,7 +10,7 @@
 <% end %>
 
 <div class="column1-unit">
-	<% form_for [@league, @tournament], :url => league_tournaments_path(@league, :method=>:post), :html => {:id=>"new_tournament_form"} do |f| %>
+	<% form_for [@league, @tournament], :url => league_tournament_path(@league, @tournament, :method=>:post), :html => {:id=>"new_tournament_form"} do |f| %>
 		<%= render :partial => "league_tournament_form", :object => @tournament, :locals=> {:f => f, :league => @league, :button_text=>"Update"} %>
 		<%= link_to 'Show', [@league, @tournament] %> | <%= link_to 'Back', league_tournaments_path(@league) %>
 	<% end %>
