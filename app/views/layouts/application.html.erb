@@ -41,7 +41,7 @@
 					</ul>
 					<% for league in League.find(:all) %>
 					<ul>
-						<li><a href="<%= league_path league %>"><%= league.name %></a></li>
+						<li><a href="<%= standing_path league %>"><%= league.name %></a></li>
 					</ul>
 				  	<% end %>
 					<ul>

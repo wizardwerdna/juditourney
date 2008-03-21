@@ -1,12 +1,6 @@
 class LeaguesController < ApplicationController
 
-  ##
-  # cache the crap out of the show action by making it purely
-  # public and running it as though unauthenticated
-  #
-  skip_before_filter :authentication_information, :only => :show
-  caches_page :show
-  cache_sweeper :league_sweeper, :only => [:create, :update, :destroy]
+  cache_sweeper :standing_sweeper, :only => [:create, :update, :destroy]
   
   # GET /leagues
   # GET /leagues.xml
@@ -22,7 +16,6 @@ class LeaguesController < ApplicationController
   # GET /leagues/1
   # GET /leagues/1.xml
   def show
-    disable_admin_display
     @league = League.find(params[:id])
     @report = @league.detail_report_data
 

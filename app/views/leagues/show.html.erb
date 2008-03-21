@@ -3,7 +3,7 @@
 
 <div class="column1-unit">
 <h2><%=h @league.description %></h2>
-<%= link_to 'List of All Leagues', leagues_path %>
+<%= link_to 'League Tournaments', league_tournaments_path(@league) %> | <%= link_to 'Current Standings', standing_path(@league) %> | <%= link_to 'List of All Leagues', leagues_path %>
 </div>
 <hr class="clear-contentunit" />
 
