@@ -1,5 +1,6 @@
 class TournamentEntriesController < ApplicationController
   prepend_before_filter :load_resource_finder, :set_page_title
+  cache_sweeper :league_sweeper, :only => [:create, :update, :destroy]
 
   def page_title
     "Tournament Entries for #{@tournament.league.name}"

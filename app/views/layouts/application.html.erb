@@ -47,7 +47,7 @@
 					<ul>
 						<li><a href="/players">Players</a></li>
 					</ul>
-					<% if logged_in? %>
+					<% if logged_in? && @admin_display_enabled %>
 					<ul>
 						<li><a href="#">Databases<!--[if IE 7]><!--></a><!--<![endif]-->
 							<!--[if lte IE 6]><table><tr><td><![endif]-->

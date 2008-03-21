@@ -3,9 +3,6 @@
 
 <div class="column1-unit">
 <h2><%=h @league.description %></h2>
-<% if logged_in? %>
-	<%= link_to 'Edit this League', edit_league_path(@league) %> | 
-<% end %>
 <%= link_to 'List of All Leagues', leagues_path %>
 </div>
 <hr class="clear-contentunit" />

@@ -1,5 +1,13 @@
 class LeaguesController < ApplicationController
- 
+
+  ##
+  # cache the crap out of the show action by making it purely
+  # public and running it as though unauthenticated
+  #
+  skip_before_filter :authentication_information, :only => :show
+  caches_page :show
+  cache_sweeper :league_sweeper, :only => [:create, :update, :destroy]
+  
   # GET /leagues
   # GET /leagues.xml
   def index
@@ -14,6 +22,7 @@ class LeaguesController < ApplicationController
   # GET /leagues/1
   # GET /leagues/1.xml
   def show
+    disable_admin_display
     @league = League.find(params[:id])
     @report = @league.detail_report_data
 
@@ -49,19 +58,9 @@ class LeaguesController < ApplicationController
         flash[:notice] = 'League was successfully created.'
         format.html { redirect_to(@league) }
         format.xml  { render :xml => @league, :status => :created, :location => @league }
-        format.js   { 1/0
-          render :update do |page|
-            page.replace_html 'new_tournament', "we saved just fine!"
-          end
-        }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @league.errors, :status => :unprocessable_entity }
-        format.js   { 1/0
-          render :update do |page|
-            page.replace_html 'new_tournament', "we lost, just fucking lost!"
-          end
-        }
       end
     end
   end
