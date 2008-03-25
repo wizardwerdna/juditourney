@@ -24,9 +24,7 @@ class Player < ActiveRecord::Base
   
   def self.find_all_by_full_name_like(string, *args)
     last, first = split_names_from(string)
-    puts "test"
     find(:all, *args).select do |player|
-      puts "trying #{player.full_name}"
       player.full_name.downcase.include? string.downcase
     end
   end
