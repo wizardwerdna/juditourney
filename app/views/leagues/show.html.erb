@@ -8,7 +8,10 @@
 <hr class="clear-contentunit" />
 
 <h1 class="block">League Standings and Tournament Results</h1>
+
+<% for page_number in (1..@report[:tournaments].number_of_pages) %>
 <div class="column1-unit" class="tiles-list">
+	<%= logger.error "Page #{page_number} of #{@report[:tournaments].number_of_pages} pages"%>
 	<ul class="tile-list">
 	<li>
 		<div class="standings-tile">
@@ -21,7 +24,7 @@
 					</div>
 				</div>
 			</div>
-			<% for tournament in @report[:tournaments] -%>
+			<% for tournament in @report[:tournaments].page(page_number) -%>
 			<div class="tile-square-datebox">
 				<A href="<%= league_tournament_path(@league, tournament) %>"><%= tournament.formatted_start(:short) %></A>
 			</div>
@@ -42,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-			<% for tournament in @report[:tournaments] %>
+			<% for tournament in @report[:tournaments].page(page_number) %>
 			<div class="tile-square-datebox">
 				<% if result = @report[:results][player][tournament] %>
 					<%= result.points %>/<%= result.place %>
@@ -56,6 +59,7 @@
 	<% end %>
 	</ul>
 </div>
+<% end %>
 
 <h1 class="block">League Financials</h1>
 <div class="column1-unit">

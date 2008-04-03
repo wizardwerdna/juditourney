@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :leagues do |league|
     league.resources :tournaments, :controller => :league_tournaments 
+    league.resources :standings, :controller => :league_standings 
   end
 
   map.resources :players
