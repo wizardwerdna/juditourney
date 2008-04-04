@@ -1,0 +1,46 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour
+http://rspec.rubyforge.org/svn
+
+
+
+2007-11-03T06:12:51.995964Z
+2811
+dchelimsky
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+everything.rb
+file
+
+
+
+
+2008-03-21T18:37:55.000000Z
+beaf2307a07600bf52ace4d05a3ff47f
+2007-08-28T18:50:11.372829Z
+2475
+aslak_hellesoy
+
+stories
+dir
+
+examples
+dir
+

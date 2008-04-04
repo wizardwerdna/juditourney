@@ -1,0 +1,40 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/examples/stories/steps
+http://rspec.rubyforge.org/svn
+
+
+
+2007-12-02T01:08:07.553585Z
+3032
+btakita
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+addition_steps.rb
+file
+
+
+
+
+2008-03-21T18:37:55.000000Z
+07194a64899f796951c81248bcb00096
+2007-12-02T01:08:07.553585Z
+3032
+btakita
+

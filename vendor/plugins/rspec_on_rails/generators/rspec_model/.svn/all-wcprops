@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec_model
+END
+USAGE
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec_model/USAGE
+END
+rspec_model_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec_model/rspec_model_generator.rb
+END

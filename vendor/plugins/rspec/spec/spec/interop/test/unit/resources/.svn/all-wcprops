@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources
+END
+spec_with_errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources/spec_with_errors.rb
+END
+test_case_with_errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources/test_case_with_errors.rb
+END
+spec_that_fails.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources/spec_that_fails.rb
+END
+spec_that_passes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources/spec_that_passes.rb
+END
+test_case_that_fails.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources/test_case_that_fails.rb
+END
+test_case_that_passes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources/test_case_that_passes.rb
+END
+testsuite_adapter_spec_with_test_unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/resources/testsuite_adapter_spec_with_test_unit.rb
+END

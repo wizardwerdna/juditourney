@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit
+END
+testsuite_adapter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/testsuite_adapter_spec.rb
+END
+spec_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/spec_spec.rb
+END
+testcase_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/testcase_spec.rb
+END
+test_unit_spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/interop/test/unit/test_unit_spec_helper.rb
+END

@@ -1,0 +1,41 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec_on_rails/lib/spec/rails/extensions/spec/example
+http://rspec.rubyforge.org/svn
+
+
+
+2007-12-14T19:43:11.926255Z
+3158
+btakita
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+configuration.rb
+file
+
+
+
+
+2008-03-21T18:37:58.000000Z
+96091528d9f7c6e0be6b6a1d809819d8
+2007-12-14T19:43:11.926255Z
+3158
+btakita
+has-props
+

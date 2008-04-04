@@ -1,0 +1,40 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/lib/spec/interop/test/unit/ui/console
+http://rspec.rubyforge.org/svn
+
+
+
+2008-01-20T03:36:03.199831Z
+3240
+dchelimsky
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+testrunner.rb
+file
+
+
+
+
+2008-03-21T18:37:55.000000Z
+d25d79142b82086432e7320013efee6c
+2008-01-20T03:36:03.199831Z
+3240
+dchelimsky
+

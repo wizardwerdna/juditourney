@@ -1,0 +1,40 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/stories/resources/steps
+http://rspec.rubyforge.org/svn
+
+
+
+2007-12-03T12:33:40.958837Z
+3048
+dchelimsky
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+running_rspec.rb
+file
+
+
+
+
+2008-03-21T18:37:54.000000Z
+1159878311b1e99982b8ad0adeda5939
+2007-12-03T12:33:40.958837Z
+3048
+dchelimsky
+

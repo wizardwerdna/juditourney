@@ -1,0 +1,31 @@
+8
+
+dir
+66
+svn+ssh://pokerwiz.gotdns.com/Users/werdna/svn/juditourney/trunk/vendor
+svn+ssh://pokerwiz.gotdns.com/Users/werdna/svn/juditourney
+
+
+
+2008-03-04T08:12:09.776023Z
+37
+werdna
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+cb19f998-2f92-47fb-9dfd-6d91e90c5b80
+
+plugins
+dir
+

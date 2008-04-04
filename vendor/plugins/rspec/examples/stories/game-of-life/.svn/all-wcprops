@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life
+END
+life.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/life.rb
+END
+.loadpath
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/.loadpath
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/README.txt
+END

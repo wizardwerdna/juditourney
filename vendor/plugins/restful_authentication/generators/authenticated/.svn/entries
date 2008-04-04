@@ -1,0 +1,31 @@
+8
+
+dir
+66
+svn+ssh://pokerwiz.gotdns.com/Users/werdna/svn/juditourney/trunk/vendor/plugins/restful_authentication/generators/authenticated
+svn+ssh://pokerwiz.gotdns.com/Users/werdna/svn/juditourney
+
+
+
+2008-02-29T19:29:12.302772Z
+33
+werdna
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+cb19f998-2f92-47fb-9dfd-6d91e90c5b80
+
+templates
+dir
+

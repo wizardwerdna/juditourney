@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3281/tags/CURRENT/rspec/plugins/mock_frameworks
+END
+rr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3281/tags/CURRENT/rspec/plugins/mock_frameworks/rr.rb
+END
+mocha.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3281/tags/CURRENT/rspec/plugins/mock_frameworks/mocha.rb
+END
+flexmock.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3281/tags/CURRENT/rspec/plugins/mock_frameworks/flexmock.rb
+END
+rspec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3281/tags/CURRENT/rspec/plugins/mock_frameworks/rspec.rb
+END

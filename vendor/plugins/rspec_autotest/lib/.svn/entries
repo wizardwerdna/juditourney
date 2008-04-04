@@ -1,0 +1,40 @@
+8
+
+dir
+66
+svn+ssh://pokerwiz.gotdns.com/Users/werdna/svn/juditourney/trunk/vendor/plugins/rspec_autotest/lib
+svn+ssh://pokerwiz.gotdns.com/Users/werdna/svn/juditourney
+
+
+
+2008-02-27T06:36:24.424153Z
+22
+werdna
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+cb19f998-2f92-47fb-9dfd-6d91e90c5b80
+
+rspec_autotest.rb
+file
+
+
+
+
+2008-03-21T18:37:41.000000Z
+6a631734d75cd5fd0ffacda2c14c7c3a
+2008-02-27T06:36:24.424153Z
+22
+werdna
+

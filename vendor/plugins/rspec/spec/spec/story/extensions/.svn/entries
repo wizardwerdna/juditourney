@@ -1,0 +1,40 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/spec/spec/story/extensions
+http://rspec.rubyforge.org/svn
+
+
+
+2007-10-29T04:12:01.056651Z
+2796
+dchelimsky
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+main_spec.rb
+file
+
+
+
+
+2008-03-21T18:37:54.000000Z
+4ddcdf9ebf787a944e71895a1b3889f6
+2007-10-29T04:12:01.056651Z
+2796
+dchelimsky
+

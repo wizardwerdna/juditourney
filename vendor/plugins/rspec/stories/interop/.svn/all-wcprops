@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3281/tags/CURRENT/rspec/stories/interop
+END
+examples_and_tests_together
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3281/tags/CURRENT/rspec/stories/interop/examples_and_tests_together
+END
+test_case_with_should_methods
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3281/tags/CURRENT/rspec/stories/interop/test_case_with_should_methods
+END
+stories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3281/tags/CURRENT/rspec/stories/interop/stories.rb
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3281/tags/CURRENT/rspec/pre_commit/spec/pre_commit
+END
+pre_commit_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3281/tags/CURRENT/rspec/pre_commit/spec/pre_commit/pre_commit_spec.rb
+END
+rspec_on_rails_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3281/tags/CURRENT/rspec/pre_commit/spec/pre_commit/rspec_on_rails_spec.rb
+END

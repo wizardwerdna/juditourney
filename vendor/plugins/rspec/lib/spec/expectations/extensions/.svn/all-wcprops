@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3281/tags/CURRENT/rspec/lib/spec/expectations/extensions
+END
+string_and_symbol.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3281/tags/CURRENT/rspec/lib/spec/expectations/extensions/string_and_symbol.rb
+END
+object.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3281/tags/CURRENT/rspec/lib/spec/expectations/extensions/object.rb
+END

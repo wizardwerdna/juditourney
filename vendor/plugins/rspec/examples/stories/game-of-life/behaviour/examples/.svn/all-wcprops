@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/examples
+END
+game_behaviour.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/examples/game_behaviour.rb
+END
+examples.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/examples/examples.rb
+END
+grid_behaviour.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/examples/grid_behaviour.rb
+END

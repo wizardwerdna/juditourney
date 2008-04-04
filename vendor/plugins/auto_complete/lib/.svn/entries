@@ -1,0 +1,52 @@
+8
+
+dir
+9068
+http://dev.rubyonrails.com/svn/rails/plugins/auto_complete/lib
+http://dev.rubyonrails.com/svn/rails
+
+
+
+2007-09-11T02:55:47.250323Z
+7449
+david
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5ecf4fe2-1ee6-0310-87b1-e25e094e27de
+
+auto_complete.rb
+file
+
+
+
+
+2008-03-21T18:38:03.000000Z
+dbb362d8339b4a18d3036061fcfa3d38
+2007-09-11T02:55:47.250323Z
+7449
+david
+
+auto_complete_macros_helper.rb
+file
+
+
+
+
+2008-03-21T18:38:03.000000Z
+bd51385b36e885c16d2e177924819667
+2007-09-11T02:55:47.250323Z
+7449
+david
+

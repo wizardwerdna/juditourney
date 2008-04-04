@@ -1,0 +1,40 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/stories/resources/stories
+http://rspec.rubyforge.org/svn
+
+
+
+2007-12-18T12:24:05.093340Z
+3186
+dchelimsky
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+failing_story.rb
+file
+
+
+
+
+2008-03-21T18:37:54.000000Z
+2edbbd92daa9d2bf493ac094286edbd4
+2007-12-18T12:24:05.093340Z
+3186
+dchelimsky
+

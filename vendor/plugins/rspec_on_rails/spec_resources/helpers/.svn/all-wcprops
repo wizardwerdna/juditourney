@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/helpers
+END
+explicit_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/helpers/explicit_helper.rb
+END
+plugin_application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/helpers/plugin_application_helper.rb
+END
+more_explicit_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/helpers/more_explicit_helper.rb
+END
+view_spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/helpers/view_spec_helper.rb
+END

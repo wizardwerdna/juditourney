@@ -1,0 +1,31 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/plugins
+http://rspec.rubyforge.org/svn
+
+
+
+2007-12-10T03:32:53.605417Z
+3111
+dchelimsky
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+mock_frameworks
+dir
+

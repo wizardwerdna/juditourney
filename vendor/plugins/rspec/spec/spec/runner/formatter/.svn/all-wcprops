@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter
+END
+specdoc_formatter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/specdoc_formatter_spec.rb
+END
+failing_example_groups_formatter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/failing_example_groups_formatter_spec.rb
+END
+html_formatted-1.8.4.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/html_formatted-1.8.4.html
+END
+html_formatted-1.8.5.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/html_formatted-1.8.5.html
+END
+html_formatted-1.8.6.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/html_formatted-1.8.6.html
+END
+progress_bar_formatter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/progress_bar_formatter_spec.rb
+END
+snippet_extractor_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/snippet_extractor_spec.rb
+END
+profile_formatter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/profile_formatter_spec.rb
+END
+spec_mate_formatter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/spec_mate_formatter_spec.rb
+END
+html_formatter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/html_formatter_spec.rb
+END
+failing_examples_formatter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/failing_examples_formatter_spec.rb
+END
+text_mate_formatted-1.8.4.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/text_mate_formatted-1.8.4.html
+END
+text_mate_formatted-1.8.6.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/text_mate_formatted-1.8.6.html
+END
+html_formatted-1.8.5-jruby.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/html_formatted-1.8.5-jruby.html
+END
+html_formatted-1.8.6-jruby.html
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner/formatter/html_formatted-1.8.6-jruby.html
+END

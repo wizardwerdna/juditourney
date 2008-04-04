@@ -1,0 +1,79 @@
+8
+
+dir
+3333
+http://rspec.rubyforge.org/svn/tags/CURRENT/rspec/spec/spec/interop/test/unit
+http://rspec.rubyforge.org/svn
+
+
+
+2008-01-20T17:36:00.435637Z
+3250
+dchelimsky
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+410327ef-2207-0410-a325-f78bbcb22a5a
+
+testsuite_adapter_spec.rb
+file
+
+
+
+
+2008-03-21T18:37:54.000000Z
+aed312e75665726bc492596d26bc2083
+2008-01-20T06:52:23.258113Z
+3245
+dchelimsky
+
+spec_spec.rb
+file
+
+
+
+
+2008-03-21T18:37:54.000000Z
+09eef1d43f5a34e0f658a7ef99117ed2
+2008-01-20T06:52:23.258113Z
+3245
+dchelimsky
+
+testcase_spec.rb
+file
+
+
+
+
+2008-03-21T18:37:54.000000Z
+c94af4d61c61b688878795fb896e7892
+2008-01-20T06:52:23.258113Z
+3245
+dchelimsky
+
+test_unit_spec_helper.rb
+file
+
+
+
+
+2008-03-21T18:37:54.000000Z
+7ee19cfa1889054398684a7b4858b99f
+2008-01-12T18:00:08.261786Z
+3221
+dchelimsky
+
+resources
+dir
+

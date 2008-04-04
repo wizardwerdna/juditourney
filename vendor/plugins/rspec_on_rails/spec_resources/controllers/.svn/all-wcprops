@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/controllers
+END
+action_view_base_spec_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/controllers/action_view_base_spec_controller.rb
+END
+redirect_spec_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/controllers/redirect_spec_controller.rb
+END
+controller_spec_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/controllers/controller_spec_controller.rb
+END
+rjs_spec_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/controllers/rjs_spec_controller.rb
+END
+render_spec_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/controllers/render_spec_controller.rb
+END

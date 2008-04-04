@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories
+END
+steps.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/steps.rb
+END
+CellsWithLessThanTwoNeighboursDie.story
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/CellsWithLessThanTwoNeighboursDie.story
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/helper.rb
+END
+TheGridWraps.story
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/TheGridWraps.story
+END
+create_a_cell.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/create_a_cell.rb
+END
+ICanKillACell.story
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/ICanKillACell.story
+END
+stories.txt
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/stories.txt
+END
+stories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/stories.rb
+END
+CellsWithMoreThanThreeNeighboursDie.story
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/CellsWithMoreThanThreeNeighboursDie.story
+END
+EmptySpacesWithThreeNeighboursCreateACell.story
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/EmptySpacesWithThreeNeighboursCreateACell.story
+END
+kill_a_cell.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/kill_a_cell.rb
+END
+ICanCreateACell.story
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3281/tags/CURRENT/rspec/examples/stories/game-of-life/behaviour/stories/ICanCreateACell.story
+END

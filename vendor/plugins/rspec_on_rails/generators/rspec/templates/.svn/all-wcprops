@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec/templates
+END
+all_stories.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec/templates/all_stories.rb
+END
+previous_failures.txt
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec/templates/previous_failures.txt
+END
+stories_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec/templates/stories_helper.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec/templates/spec_helper.rb
+END
+rcov.opts
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec/templates/rcov.opts
+END
+spec.opts
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/generators/rspec/templates/spec.opts
+END

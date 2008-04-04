@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/render_spec
+END
+_a_partial.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/render_spec/_a_partial.rhtml
+END
+some_action.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/render_spec/some_action.rhtml
+END
+some_action.js.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/render_spec/some_action.js.rjs
+END
+some_action.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/render_spec/some_action.rjs
+END

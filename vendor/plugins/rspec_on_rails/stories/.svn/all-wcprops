@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/stories
+END
+transactions_should_rollback
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/stories/transactions_should_rollback
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/stories/helper.rb
+END
+transactions_should_rollback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/stories/transactions_should_rollback.rb
+END
+all.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/stories/all.rb
+END

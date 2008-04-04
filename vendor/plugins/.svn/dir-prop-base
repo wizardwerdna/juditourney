@@ -1,0 +1,10 @@
+K 13
+svn:externals
+V 436
+rspec                         http://rspec.rubyforge.org/svn/tags/CURRENT/rspec
+rspec_on_rails                http://rspec.rubyforge.org/svn/tags/CURRENT/rspec_on_rails
+auto_complete                 http://dev.rubyonrails.com/svn/rails/plugins/auto_complete
+auto_complete                 http://dev.rubyonrails.com/svn/rails/plugins/auto_complete
+auto_complete                 http://dev.rubyonrails.com/svn/rails/plugins/auto_complete
+
+END

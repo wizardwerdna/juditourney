@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec
+END
+runner_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/runner_spec.rb
+END
+translator_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/translator_spec.rb
+END
+spec_classes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3281/tags/CURRENT/rspec/spec/spec/spec_classes.rb
+END

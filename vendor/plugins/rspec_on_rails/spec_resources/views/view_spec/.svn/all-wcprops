@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec
+END
+_partial.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/_partial.rhtml
+END
+_partial_with_sub_partial.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/_partial_with_sub_partial.rhtml
+END
+template_with_partial_with_array.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/template_with_partial_with_array.rhtml
+END
+_spacer.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/_spacer.rhtml
+END
+multiple_helpers.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/multiple_helpers.rhtml
+END
+explicit_helper.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/explicit_helper.rhtml
+END
+accessor.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/accessor.rhtml
+END
+template_with_partial.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/template_with_partial.rhtml
+END
+template_with_partial_using_collection.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/template_with_partial_using_collection.rhtml
+END
+entry_form.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/entry_form.rhtml
+END
+_partial_with_local_variable.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/_partial_with_local_variable.rhtml
+END
+_partial_used_twice.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/_partial_used_twice.rhtml
+END
+implicit_helper.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec_resources/views/view_spec/implicit_helper.rhtml
+END

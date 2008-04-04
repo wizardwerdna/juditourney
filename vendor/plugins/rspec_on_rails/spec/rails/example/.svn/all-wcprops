@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example
+END
+controller_isolation_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/controller_isolation_spec.rb
+END
+view_spec_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/view_spec_spec.rb
+END
+configuration_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/configuration_spec.rb
+END
+helper_spec_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/helper_spec_spec.rb
+END
+model_spec_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/model_spec_spec.rb
+END
+shared_behaviour_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/shared_behaviour_spec.rb
+END
+assigns_hash_proxy_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/assigns_hash_proxy_spec.rb
+END
+test_unit_assertion_accessibility_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/test_unit_assertion_accessibility_spec.rb
+END
+controller_spec_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/controller_spec_spec.rb
+END
+example_group_factory_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/example_group_factory_spec.rb
+END
+ivar_proxy_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails/example/ivar_proxy_spec.rb
+END

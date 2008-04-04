@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec
+END
+rails_suite.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/rails_suite.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/3281/tags/CURRENT/rspec_on_rails/spec/spec_helper.rb
+END

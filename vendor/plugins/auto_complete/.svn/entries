@@ -1,0 +1,70 @@
+8
+
+dir
+9068
+http://dev.rubyonrails.com/svn/rails/plugins/auto_complete
+http://dev.rubyonrails.com/svn/rails
+
+
+
+2007-09-11T15:01:16.656596Z
+7461
+david
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5ecf4fe2-1ee6-0310-87b1-e25e094e27de
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2008-03-21T18:38:03.000000Z
+705a89824a98485e70202ea52528c61c
+2007-09-11T02:55:47.250323Z
+7449
+david
+
+init.rb
+file
+
+
+
+
+2008-03-21T18:38:03.000000Z
+bcf4ca5abe5686688244b12bce018e24
+2007-09-11T15:01:16.656596Z
+7461
+david
+
+lib
+dir
+
+README
+file
+
+
+
+
+2008-03-21T18:38:03.000000Z
+fb23a17d26849791cce5930621981272
+2007-09-11T02:55:47.250323Z
+7449
+david
+
