@@ -1,5 +1,11 @@
+# set :application, "juditourney"
+# set :repository,  "svn+ssh://werdna@pokerwiz.gotdns.com/Users/werdna/svn/juditourney/trunk"
 set :application, "juditourney"
-set :repository,  "svn+ssh://werdna@pokerwiz.gotdns.com/Users/werdna/svn/juditourney/trunk"
+default_run_options[:pty] = true
+set :repository,  "git@github.com:wizardwerdna/juditourney.git"
+set :scm, "git"
+set :git, "/usr/local/git/bin/git"
+set :user, "werdna"
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
