@@ -6,6 +6,8 @@ set :repository,  "git@github.com:wizardwerdna/juditourney.git"
 set :scm, "git"
 set :git, "/usr/local/git/bin/git"
 set :user, "werdna"
+set :branch, "origin/master"
+set :deploy_via, :remote_cache
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
