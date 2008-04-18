@@ -50,7 +50,7 @@ class League < ActiveRecord::Base
     @tournaments = @entries.collect{|each| each.tournament}.uniq
     @tournaments.instance_eval do
       def number_of_pages(page_size =10)
-        1 + self.size / page_size
+        1 + (self.size-1) / page_size
       end
       
       def page(page=1, page_size =10)
