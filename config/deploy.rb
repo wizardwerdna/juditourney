@@ -6,20 +6,21 @@ set :scm, "git"
 set :git, "/usr/local/bin/git"
 set :user, "werdna"
 # set :branch, "origin/master"
-# set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 role :web, "lawhacker.com"
 role :app, "lawhacker.com"
 role :db,  "lawhacker.com", :primary => true
 
 set :deploy_to, "/home/werdna/juditourney" 
 
-task :restart, :roles => :app do
-  echo "foo man foo"
-  touch "/home/werdna/juditourney/current/tmp/foo.txt"
+set :use_sudo, false
+
+deploy.task :restart, :roles => :app do
 end
 
-task :after_update_code, :roles => [:web, :db, :app] do
+deploy.task :after_update_code, :roles => [:web, :db, :app] do
+end
+
+deploy.task :after_symlink, :roles => [:web, :db, :app] do
   run "chmod 755 /home/werdna/juditourney/current/public -R" 
 end
-
-set :use_sudo, false

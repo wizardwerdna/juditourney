@@ -3026,3 +3026,389 @@ Page 1 of 1 pages
   [4;36;1mLeague Load (0.000831)[0m   [0;1mSELECT * FROM leagues [0m
   [4;35;1mUser Load (0.000389)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
 Completed in 0.32080 (3 reqs/sec) | Rendering: 0.13828 (43%) | DB: 0.10094 (31%) | 200 OK [http://localhost/standings/1]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-05-20 04:37:32) [GET]
+  Session ID: adcca4d0dbe8ed132a19aab8113ffab6
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_breadcrumbs (0.00181)
+  [4;36;1mLeague Load (0.001244)[0m   [0;1mSELECT * FROM leagues [0m
+Completed in 0.04830 (20 reqs/sec) | Rendering: 0.04336 (89%) | DB: 0.00124 (2%) | 200 OK [http://localhost/]
+
+
+Processing PlayersController#auto_complete_for_player_full_name (for 127.0.0.1 at 2008-05-20 04:37:36) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2ZmMDg1NjUyZmNlODI0%0ANzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--f38666b5c2f3aca166e5f78f4631bbcce12aa4c4
+  Parameters: {"player"=>{"full_name"=>"Ki"}, "action"=>"auto_complete_for_player_full_name", "controller"=>"players"}
+  [4;35;1mPlayer Load (0.006020)[0m   [0mSELECT * FROM players ORDER BY last, first[0m
+Rendered players/_player_full_name (0.00165)
+Completed in 0.07620 (13 reqs/sec) | Rendering: 0.00209 (2%) | DB: 0.00602 (7%) | 200 OK [http://localhost/players/auto_complete_for_player_full_name]
+
+
+Processing PlayersController#auto_complete_for_player_full_name (for 127.0.0.1 at 2008-05-20 04:37:38) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2ZmMDg1NjUyZmNlODI0%0ANzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--f38666b5c2f3aca166e5f78f4631bbcce12aa4c4
+  Parameters: {"player"=>{"full_name"=>"Ju"}, "action"=>"auto_complete_for_player_full_name", "controller"=>"players"}
+  [4;36;1mPlayer Load (0.005207)[0m   [0;1mSELECT * FROM players ORDER BY last, first[0m
+Rendered players/_player_full_name (0.00028)
+Completed in 0.01499 (66 reqs/sec) | Rendering: 0.00063 (4%) | DB: 0.00521 (34%) | 200 OK [http://localhost/players/auto_complete_for_player_full_name]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-05-20 04:37:45) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2ZmMDg1NjUyZmNlODI0%0ANzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--f38666b5c2f3aca166e5f78f4631bbcce12aa4c4
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"8c4d0ed6bedbcb5ea9eb0b1754302af3bab0b120", "action"=>"create", "controller"=>"sessions", "password"=>"judi1121", "login"=>"judi"}
+  [4;35;1mUser Load (0.000427)[0m   [0mSELECT * FROM users WHERE (users."login" = 'judi') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 0.06224 (16 reqs/sec) | DB: 0.00043 (0%) | 302 Found [http://localhost/session]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-05-20 04:37:45) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2Zm%0AMDg1NjUyZmNlODI0NzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs%0AYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIh5Zb3UgYXJlIGxvZ2dlZCBpbiBh%0AcyBqdWRpBjoKQHVzZWR7BjsIVDoMdXNlcl9pZGkH--41f07f706c6e6eae0b1b5ee75ffe7d8b7f63ff10
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.000342)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) [0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_breadcrumbs (0.00016)
+  [4;35;1mLeague Load (0.000418)[0m   [0mSELECT * FROM leagues [0m
+Completed in 0.02123 (47 reqs/sec) | Rendering: 0.01058 (49%) | DB: 0.00076 (3%) | 200 OK [http://localhost/]
+
+
+Processing PlayersController#auto_complete_for_player_full_name (for 127.0.0.1 at 2008-05-20 04:37:49) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2Zm%0AMDg1NjUyZmNlODI0NzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs%0AYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpBw%3D%3D--d8e469391724df0150e66351f27d3e29dd42fd17
+  Parameters: {"player"=>{"full_name"=>"JK"}, "action"=>"auto_complete_for_player_full_name", "controller"=>"players"}
+  [4;36;1mUser Load (0.000372)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;35;1mPlayer Load (0.005105)[0m   [0mSELECT * FROM players ORDER BY last, first[0m
+Rendered players/_player_full_name (0.00027)
+Completed in 0.02319 (43 reqs/sec) | Rendering: 0.00065 (2%) | DB: 0.00548 (23%) | 200 OK [http://localhost/players/auto_complete_for_player_full_name]
+
+
+Processing PlayersController#auto_complete_for_player_full_name (for 127.0.0.1 at 2008-05-20 04:37:50) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2Zm%0AMDg1NjUyZmNlODI0NzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs%0AYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpBw%3D%3D--d8e469391724df0150e66351f27d3e29dd42fd17
+  Parameters: {"player"=>{"full_name"=>"Ju"}, "action"=>"auto_complete_for_player_full_name", "controller"=>"players"}
+  [4;36;1mUser Load (0.000331)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;35;1mPlayer Load (0.004963)[0m   [0mSELECT * FROM players ORDER BY last, first[0m
+Rendered players/_player_full_name (0.00027)
+Completed in 0.02185 (45 reqs/sec) | Rendering: 0.00063 (2%) | DB: 0.00529 (24%) | 200 OK [http://localhost/players/auto_complete_for_player_full_name]
+
+
+Processing StandingsController#show (for 127.0.0.1 at 2008-05-20 04:37:53) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2Zm%0AMDg1NjUyZmNlODI0NzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs%0AYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpBw%3D%3D--d8e469391724df0150e66351f27d3e29dd42fd17
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"standings"}
+  [4;36;1mLeague Load (0.000265)[0m   [0;1mSELECT * FROM leagues WHERE (leagues."id" = 2) [0m
+  [4;35;1mTournament Load Including Associations (0.019831)[0m   [0mSELECT tournaments."id" AS t0_r0, tournaments."league_id" AS t0_r1, tournaments."start" AS t0_r2, tournaments."description" AS t0_r3, tournaments."buyin" AS t0_r4, tournaments."created_at" AS t0_r5, tournaments."updated_at" AS t0_r6, entries."id" AS t1_r0, entries."tournament_id" AS t1_r1, entries."player_id" AS t1_r2, entries."paid" AS t1_r3, entries."result" AS t1_r4, entries."payout" AS t1_r5, entries."created_at" AS t1_r6, entries."updated_at" AS t1_r7 FROM tournaments LEFT OUTER JOIN entries ON entries.tournament_id = tournaments.id WHERE (tournaments.league_id = 2) [0m
+  [4;36;1mPlayer Load (0.000319)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;35;1mPlayer Load (0.000261)[0m   [0mSELECT * FROM players WHERE (players."id" = 3) [0m
+  [4;36;1mPlayer Load (0.063620)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;35;1mPlayer Load (0.000352)[0m   [0mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;36;1mPlayer Load (0.000247)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 6) [0m
+  [4;35;1mPlayer Load (0.000266)[0m   [0mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;36;1mPlayer Load (0.000349)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 8) [0m
+  [4;35;1mPlayer Load (0.000296)[0m   [0mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;36;1mPlayer Load (0.000258)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;35;1mPlayer Load (0.000255)[0m   [0mSELECT * FROM players WHERE (players."id" = 11) [0m
+  [4;36;1mPlayer Load (0.000294)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;35;1mPlayer Load (0.000269)[0m   [0mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;36;1mPlayer Load (0.000312)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 27) [0m
+  [4;35;1mPlayer Load (0.000248)[0m   [0mSELECT * FROM players WHERE (players."id" = 28) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 6) [0m
+  [4;35;1mPlayer Load (0.000266)[0m   [0mSELECT * FROM players WHERE (players."id" = 29) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 11) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 29) [0m
+  [4;36;1mPlayer Load (0.000282)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 30) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 28) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 11) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 8) [0m
+  [4;36;1mPlayer Load (0.000250)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 45) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;36;1mPlayer Load (0.000262)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 36) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;35;1mPlayer Load (0.000249)[0m   [0mSELECT * FROM players WHERE (players."id" = 37) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;36;1mPlayer Load (0.000250)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 39) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 11) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 30) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;35;1mPlayer Load (0.000254)[0m   [0mSELECT * FROM players WHERE (players."id" = 44) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 11) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 45) [0m
+  [4;36;1mPlayer Load (0.000253)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 47) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 29) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 6) [0m
+  [4;36;1mPlayer Load (0.000248)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 48) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 30) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 39) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 28) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 30) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 11) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 29) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 48) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 45) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 11) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 28) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 48) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 45) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 28) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 48) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 23) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 30) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 45) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM players WHERE (players."id" = 4) [0m
+  [4;36;1mTournament Load (0.000348)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 2) [0m
+  [4;36;1mTournament Load (0.000341)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 7) [0m
+  [4;35;1mTournament Load (0.000326)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 10) [0m
+  [4;35;1mTournament Load (0.000271)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 14) [0m
+  [4;35;1mTournament Load (0.000286)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 16) [0m
+  [4;35;1mTournament Load (0.000279)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 17) [0m
+  [4;36;1mTournament Load (0.000295)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 20) [0m
+  [4;36;1mTournament Load (0.000278)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM tournaments WHERE (tournaments."id" = 22) [0m
+Rendering template within layouts/application
+Rendering leagues/show
+Rendered shared/_breadcrumbs (0.00020)
+Page 1 of 1 pages
+  [4;36;1mLeague Load (0.000431)[0m   [0;1mSELECT * FROM leagues [0m
+  [4;35;1mUser Load (0.000370)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+Completed in 0.20973 (4 reqs/sec) | Rendering: 0.02728 (13%) | DB: 0.09298 (44%) | 200 OK [http://localhost/standings/2]
+
+
+Processing PlayersController#auto_complete_for_player_full_name (for 127.0.0.1 at 2008-05-20 04:37:57) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2Zm%0AMDg1NjUyZmNlODI0NzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs%0AYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpBw%3D%3D--d8e469391724df0150e66351f27d3e29dd42fd17
+  Parameters: {"player"=>{"full_name"=>"Jud"}, "action"=>"auto_complete_for_player_full_name", "controller"=>"players"}
+  [4;36;1mUser Load (0.000299)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;35;1mPlayer Load (0.004856)[0m   [0mSELECT * FROM players ORDER BY last, first[0m
+Rendered players/_player_full_name (0.00027)
+Completed in 0.02111 (47 reqs/sec) | Rendering: 0.00062 (2%) | DB: 0.00516 (24%) | 200 OK [http://localhost/players/auto_complete_for_player_full_name]
+
+
+Processing LeagueTournamentsController#show (for 127.0.0.1 at 2008-05-20 04:38:01) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2Zm%0AMDg1NjUyZmNlODI0NzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs%0AYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpBw%3D%3D--d8e469391724df0150e66351f27d3e29dd42fd17
+  Parameters: {"league_id"=>"2", "action"=>"show", "id"=>"22", "controller"=>"league_tournaments"}
+  [4;36;1mLeague Load (0.000251)[0m   [0;1mSELECT * FROM leagues WHERE (leagues."id" = 2) [0m
+  [4;35;1mUser Load (0.000404)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mTournament Load (0.000309)[0m   [0;1mSELECT * FROM tournaments WHERE (tournaments."id" = 22 AND (tournaments.league_id = 2)) [0m
+Rendering template within layouts/application
+Rendering league_tournaments/show
+Rendered shared/_breadcrumbs (0.00022)
+Rendered tournament_entries/_error_messages (0.00115)
+Rendered tournament_entries/_entries_form (0.00502)
+Rendered tournament_entries/_new_form (0.00944)
+  [4;35;1mEntry Load (0.002977)[0m   [0mSELECT * FROM entries WHERE (entries.tournament_id = 22) [0m
+  [4;36;1mPlayer Load (0.000518)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 28) [0m
+Rendered tournament_entries/_entries_tile (0.01434)
+Rendered tournament_entries/_entries_tile_row (0.01617)
+  [4;35;1mPlayer Load (0.000439)[0m   [0mSELECT * FROM players WHERE (players."id" = 9) [0m
+Rendered tournament_entries/_entries_tile (0.00189)
+Rendered tournament_entries/_entries_tile_row (0.00251)
+  [4;36;1mPlayer Load (0.000362)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 1) [0m
+Rendered tournament_entries/_entries_tile (0.00165)
+Rendered tournament_entries/_entries_tile_row (0.00218)
+  [4;35;1mPlayer Load (0.000347)[0m   [0mSELECT * FROM players WHERE (players."id" = 48) [0m
+Rendered tournament_entries/_entries_tile (0.00154)
+Rendered tournament_entries/_entries_tile_row (0.00201)
+  [4;36;1mPlayer Load (0.000306)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 23) [0m
+Rendered tournament_entries/_entries_tile (0.00144)
+Rendered tournament_entries/_entries_tile_row (0.00187)
+  [4;35;1mPlayer Load (0.000293)[0m   [0mSELECT * FROM players WHERE (players."id" = 6) [0m
+Rendered tournament_entries/_entries_tile (0.00131)
+Rendered tournament_entries/_entries_tile_row (0.00169)
+  [4;36;1mPlayer Load (0.000277)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 7) [0m
+Rendered tournament_entries/_entries_tile (0.00131)
+Rendered tournament_entries/_entries_tile_row (0.00171)
+  [4;35;1mPlayer Load (0.000292)[0m   [0mSELECT * FROM players WHERE (players."id" = 10) [0m
+Rendered tournament_entries/_entries_tile (0.00135)
+Rendered tournament_entries/_entries_tile_row (0.00179)
+  [4;36;1mPlayer Load (0.000328)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 8) [0m
+Rendered tournament_entries/_entries_tile (0.00146)
+Rendered tournament_entries/_entries_tile_row (0.00190)
+  [4;35;1mPlayer Load (0.000375)[0m   [0mSELECT * FROM players WHERE (players."id" = 5) [0m
+Rendered tournament_entries/_entries_tile (0.00276)
+Rendered tournament_entries/_entries_tile_row (0.00321)
+  [4;36;1mPlayer Load (0.000288)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 30) [0m
+Rendered tournament_entries/_entries_tile (0.00127)
+Rendered tournament_entries/_entries_tile_row (0.00167)
+  [4;35;1mPlayer Load (0.000273)[0m   [0mSELECT * FROM players WHERE (players."id" = 45) [0m
+Rendered tournament_entries/_entries_tile (0.00134)
+Rendered tournament_entries/_entries_tile_row (0.00171)
+  [4;36;1mPlayer Load (0.000273)[0m   [0;1mSELECT * FROM players WHERE (players."id" = 2) [0m
+Rendered tournament_entries/_entries_tile (0.00123)
+Rendered tournament_entries/_entries_tile_row (0.00160)
+  [4;35;1mPlayer Load (0.000272)[0m   [0mSELECT * FROM players WHERE (players."id" = 4) [0m
+Rendered tournament_entries/_entries_tile (0.00119)
+Rendered tournament_entries/_entries_tile_row (0.00157)
+  [4;36;1mLeague Load (0.000328)[0m   [0;1mSELECT * FROM leagues [0m
+Completed in 0.16255 (6 reqs/sec) | Rendering: 0.06081 (37%) | DB: 0.00891 (5%) | 200 OK [http://localhost/leagues/2/tournaments/22]
+
+
+Processing PlayersController#auto_complete_for_entry_player_full_name (for 127.0.0.1 at 2008-05-20 04:38:04) [POST]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoMY3NyZl9pZCIlYzgyYTIxZGMzYTBlMzBiN2Zm%0AMDg1NjUyZmNlODI0NzQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZs%0AYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DHVzZXJfaWRpBw%3D%3D--d8e469391724df0150e66351f27d3e29dd42fd17
+  Parameters: {"action"=>"auto_complete_for_entry_player_full_name", "controller"=>"players", "entry"=>{"player_full_name"=>"Jud"}}
+  [4;35;1mUser Load (0.000306)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mPlayer Load (0.004916)[0m   [0;1mSELECT * FROM players ORDER BY last, first[0m
+Rendered players/_player_full_name (0.00027)
+Completed in 0.02161 (46 reqs/sec) | Rendering: 0.00063 (2%) | DB: 0.00522 (24%) | 200 OK [http://localhost/players/auto_complete_for_entry_player_full_name]
