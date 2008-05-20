@@ -14,9 +14,12 @@ role :db,  "lawhacker.com", :primary => true
 set :deploy_to, "/home/werdna/juditourney" 
 
 task :restart, :roles => :app do
+  echo "foo man foo"
   touch "/home/werdna/juditourney/current/tmp/foo.txt"
 end
 
 task :after_update_code, :roles => [:web, :db, :app] do
   run "chmod 755 /home/werdna/juditourney/current/public -R" 
 end
+
+set :use_sudo, false
