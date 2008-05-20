@@ -6,7 +6,7 @@ set :scm, "git"
 set :git, "/usr/local/bin/git"
 set :user, "werdna"
 set :branch, "master"
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :git_shallow_clone, 1
 role :web, "lawhacker.com"
 role :app, "lawhacker.com"
