@@ -1,12 +1,12 @@
 set :user, 'werdna'
 set :server, 'lawhacker.com'
 set :application, "juditourney" 
-set :repository,  "git@github.com:wizardwerdna/juditourney.git"
+set :repository,  "git://github.com/wizardwerdna/juditourney.git"
 set :scm, "git"
 set :git, "/usr/local/bin/git"
 set :user, "werdna"
-set :branch, "origin/master"
-set :deploy_via, :remote_cache
+# set :branch, "origin/master"
+# set :deploy_via, :remote_cache
 role :web, "lawhacker.com"
 role :app, "lawhacker.com"
 role :db,  "lawhacker.com", :primary => true
