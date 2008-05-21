@@ -1,19 +1,19 @@
-set :user, 'werdna'
-set :server, 'lawhacker.com'
 set :application, "juditourney" 
-set :repository,  "git://github.com/wizardwerdna/juditourney.git"
-set :scm, "git"
-set :git, "/usr/local/bin/git"
-set :user, "werdna"
-set :branch, "master"
-# set :deploy_via, :remote_cache
-set :git_shallow_clone, 1
+set :server, 'lawhacker.com'
 role :web, "lawhacker.com"
 role :app, "lawhacker.com"
 role :db,  "lawhacker.com", :primary => true
 
-set :deploy_to, "/home/werdna/juditourney" 
+set :scm, "git"
+set :git, "/usr/local/bin/git"
+set :repository,  "git://github.com/wizardwerdna/juditourney.git"
+# set :deploy_via, :remote_cache
+set :git_shallow_clone, 1
+set :branch, "master"
+set :real_revision, "HEAD"
 
+set :user, 'werdna'
+set :deploy_to, "/home/werdna/juditourney" 
 set :use_sudo, false
 
 deploy.task :restart, :roles => :app do
