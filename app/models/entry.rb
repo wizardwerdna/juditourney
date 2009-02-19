@@ -10,9 +10,9 @@ class Entry < ActiveRecord::Base
   def points
     r = result || 0
     if r >= 1 and r <= 8
-      10 - r
+      10 - r + (bonus_points || 0)
     else
-      1
+      1 + (bonus_points || 0)
     end
   end
   

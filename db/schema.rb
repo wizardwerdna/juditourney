@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 9) do
 
   create_table "entries", :force => true do |t|
     t.integer  "tournament_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 8) do
     t.integer  "payout"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "bonus_points"
   end
 
   create_table "leagues", :force => true do |t|
