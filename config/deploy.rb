@@ -27,9 +27,9 @@ namespace :deploy do
   end
 
 
-  desc "resolve problems with passenger permissions"
+  desc "resolve problems with passenger permissions "
   task :after_symlink, :roles => [:web, :db, :app] do
-    run "chmod 755 /home/werdna/juditourney/current/public -R" 
+    run "chmod 755 /u/app/juditourney/current/public -R" 
   end
  
   [:start, :stop].each do |t|
