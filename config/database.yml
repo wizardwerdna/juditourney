@@ -20,5 +20,5 @@ test:
 
 production:
     adapter: sqlite3
-    database: /home/werdna/juditourney/production.sqlite3
+    database: /u/apps/juditourney/production.sqlite3
     timeout: 5000

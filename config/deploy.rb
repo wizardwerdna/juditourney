@@ -8,7 +8,8 @@ set :application, "juditourney"
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
 set :scm, :git
-set :repository, "git clone git://github.com/wizardwerdna/juditourney.git"
+set :git, "/usr/local/git/bin/git"
+set :repository, "git://github.com/wizardwerdna/juditourney.git"
 set :branch, "bubbles"
 set :deploy_via, :remote_cache
  
